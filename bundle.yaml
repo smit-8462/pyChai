@@ -1,0 +1,10 @@
+# layout directives are listed in order under `layout` key
+layout:
+  - Personal
+  - General
+  - -----
+
+templates:
+  author1: Smit Bangare
+  author1_profile: https://www.linkedin.com/in/smit-bangare-b04176186/
+  author1_github: https://github.com/smit-8462
