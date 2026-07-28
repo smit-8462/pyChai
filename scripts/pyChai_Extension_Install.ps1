@@ -26,6 +26,8 @@ if ($LASTEXITCODE -eq 0) {
         # Extracting ZIP
         Expand-Archive -Path $ZipPath -DestinationPath $SitePackagesPath -Force
         Write-Host "ZIP contents extracted successfully at path = $($SitePackagesPath)"
+
+        Write-Host "Congratulations🎊! pyChai extension is installed successfully."
     }
     else {
         Write-Host "$($ExtensionName) is not installed correctly."
