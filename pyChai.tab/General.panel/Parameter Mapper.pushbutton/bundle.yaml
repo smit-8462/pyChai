@@ -1,0 +1,26 @@
+title: |
+  Parameter 
+  Mapper
+
+tooltip: |
+  Batch update Revit parameters values using Excel / LibreOffice Calc / CSV file.
+  Usage - 
+    1. Launch script.
+    2. Select Category.
+    3. Select Excel / LibreOffice Calc / CSV file.
+    4. Select elements in Revit (Manual / All).
+    5. Map Revit parameter with selected file's column header.
+    6. Upon clicking "Generate Mapping", a preview will be generated.
+    7. Errors will be shown if found.
+    8. If no errors found, click "Apply" to apply values.
+
+min_revit_version: 2020
+
+max_revit_version: 2027
+
+# Sice we are using non-modal WPF form with external event, therefore we need to activate the persistent engine flag.
+# pyRevit will not clear the scope for the tools that need a persistent engine.
+engine:
+  persistent: true
+
+author: "{{author1}}"
