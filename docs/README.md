@@ -175,5 +175,5 @@ There are 2 ways to uninstall/remove the pyChai plugin -
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [kaadya-blog]: https://smit-8462.github.io/
-[linkedin-shield]: 
-[linkedin-profile]: https://www.linkedin.com/in/smit-bangare-b04176186/
+<!-- [linkedin-shield]: 
+[linkedin-profile]: https://www.linkedin.com/in/smit-bangare-b04176186/ -->
