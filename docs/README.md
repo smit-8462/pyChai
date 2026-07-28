@@ -36,7 +36,7 @@ Currently, pyChai has following major tools under its arsenal, with more automat
 
 There are 2 ways to install pyChai plugin -
 
-<details>
+<details show>
 <summary>Powershell (recommended)</summary>
 
 1. Launch Powershell.
