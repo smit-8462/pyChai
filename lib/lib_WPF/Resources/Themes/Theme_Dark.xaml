@@ -1,0 +1,129 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <!--  Dark Theme  -->
+
+    <!--#region COLORS-->
+    <!--  The numbers 00, 01, 02 etc. are the hierarchy levels. 00 is the lowest level.  -->
+    <Color x:Key="ColorBackground00">#1C1B1A</Color>
+    <Color x:Key="ColorBackground01">#382922</Color>
+    <Color x:Key="ColorBackground02">#574136</Color>
+    <Color x:Key="ColorBackground03">#785849</Color>
+    <Color x:Key="ColorBackground04">#96705d</Color>
+    <Color x:Key="ColorBackground05">#b17056</Color>
+
+    <Color x:Key="ColorErrorBackground02">#C37627</Color>
+    <Color x:Key="ColorErrorBackground04">#F59F6C</Color>
+    <Color x:Key="ColorTextError">#fee5e0</Color>
+
+    <Color x:Key="ColorForeground00">#FFF9F9</Color>
+    <Color x:Key="ColorForeground01">#FFF0D5</Color>
+    <Color x:Key="ColorForeground02">#F2DAB6</Color>
+
+    <Color x:Key="ColorStateHover">#EBC693</Color>
+    <Color x:Key="ColorStateSelect">#F4AE3E</Color>
+    <Color x:Key="ColorStateError">#C17B0B</Color>
+
+    <Color x:Key="ColorButtonNormal">#ff4e08</Color>
+    <Color x:Key="ColorButtonBrush">#e39d43</Color>
+    <Color x:Key="ColorButtonHover">#B85614</Color>
+    <Color x:Key="ColorButtonDisabled">#878787</Color>
+
+    <!-- Card Tags (Shared/Project/Built-in) -->
+    <Color x:Key="ColorLabelBackground01">#9CD3EE</Color>
+    <Color x:Key="ColorLabelBackground02">#9BEDB9</Color>
+    <Color x:Key="ColorLabelBackground03">#F7F68B</Color>
+    <Color x:Key="ColorLabelForeground01">#0976A8</Color>
+    <Color x:Key="ColorLabelForeground02">#1C9F4D</Color>
+    <Color x:Key="ColorLabelForeground03">#B7B406</Color>
+    <!--#endregion-->
+
+    <!--  ******************  -->
+    <!--#region SOLID COLORS BRUSH-->
+    <!--  DataGrid  -->
+    <SolidColorBrush x:Key="theme_datagrid_overall_bg" Color="{StaticResource ColorBackground01}" />
+    <SolidColorBrush x:Key="theme_datagrid_header_bg" Color="{StaticResource ColorBackground05}" />
+    <SolidColorBrush x:Key="theme_datagrid_alternate_row_bg" Color="{StaticResource ColorBackground02}" />
+    <SolidColorBrush x:Key="theme_datagrid_half_selected_bg" Color="{StaticResource ColorStateHover}" />
+    <SolidColorBrush x:Key="theme_datagrid_selected_bg" Color="{StaticResource ColorStateSelect}" />
+    <SolidColorBrush x:Key="theme_datagrid_error_bg" Color="{StaticResource ColorStateError}" />
+    <SolidColorBrush x:Key="theme_datagrid_gridline" Color="{StaticResource ColorForeground00}" />
+    <SolidColorBrush x:Key="theme_datagrid_overall_fg" Color="{StaticResource ColorForeground00}" />
+    <SolidColorBrush x:Key="theme_datagrid_overall_transparent" Color="Transparent" />
+    <SolidColorBrush x:Key="theme_datagrid_invalid_cell_bg" Color="{StaticResource ColorErrorBackground02}" />
+    <SolidColorBrush x:Key="theme_datagrid_invalid_row_bg" Color="{StaticResource ColorButtonHover}" />
+
+    <!--  Error  -->
+    <SolidColorBrush x:Key="theme_error_text" Color="{StaticResource ColorTextError}" />
+    <SolidColorBrush
+        x:Key="theme_error_card_bg"
+        Opacity="0.3"
+        Color="{StaticResource ColorErrorBackground04}" />
+    <SolidColorBrush x:Key="theme_error_border" Color="{StaticResource ColorForeground02}" />
+
+    <!--  Button  -->
+    <SolidColorBrush x:Key="theme_button_fg" Color="{StaticResource ColorForeground01}" />
+    <SolidColorBrush x:Key="theme_button_bg" Color="{StaticResource ColorButtonNormal}" />
+    <SolidColorBrush x:Key="theme_button_border" Color="{StaticResource ColorButtonBrush}" />
+    <SolidColorBrush x:Key="theme_button_hover" Color="{StaticResource ColorButtonHover}" />
+
+    <!--  Separator  -->
+    <SolidColorBrush x:Key="theme_separator" Color="{StaticResource ColorForeground01}" />
+
+    <!--  Text  -->
+    <SolidColorBrush x:Key="window_title" Color="{StaticResource ColorForeground01}" />
+    <SolidColorBrush x:Key="theme_button_text_02" Color="{StaticResource ColorForeground01}" />
+
+    <!--  Border  -->
+    <SolidColorBrush x:Key="theme_border_bg01" Color="{StaticResource ColorBackground01}" />
+    <SolidColorBrush
+        x:Key="theme_border_brush"
+        Opacity="0.7"
+        Color="{StaticResource ColorForeground01}" />
+
+    <!--  Toggle Button  -->
+    <SolidColorBrush x:Key="theme_toggleButton_border" Color="{StaticResource ColorForeground00}" />
+    <SolidColorBrush x:Key="theme_toggleButton_bg" Color="{StaticResource ColorForeground00}" />
+    <SolidColorBrush x:Key="theme_toggleButton_disabled_bg" Color="{StaticResource ColorButtonDisabled}" />
+    <SolidColorBrush x:Key="theme_toggleButton_fg" Color="{StaticResource ColorForeground01}" />
+    <SolidColorBrush x:Key="theme_toggleButton_selected_fg" Color="{StaticResource ColorButtonNormal}" />
+
+    <!--  Label  -->
+    <SolidColorBrush x:Key="theme_label_cardtag_bg01" Color="{StaticResource ColorLabelBackground01}" />
+    <SolidColorBrush x:Key="theme_label_cardtag_bg02" Color="{StaticResource ColorLabelBackground02}" />
+    <SolidColorBrush x:Key="theme_label_cardtag_bg03" Color="{StaticResource ColorLabelBackground03}" />
+    <SolidColorBrush x:Key="theme_label_cardtag_fg01" Color="{StaticResource ColorLabelForeground01}" />
+    <SolidColorBrush x:Key="theme_label_cardtag_fg02" Color="{StaticResource ColorLabelForeground02}" />
+    <SolidColorBrush x:Key="theme_label_cardtag_fg03" Color="{StaticResource ColorLabelForeground03}" />
+
+    <!--  General  -->
+    <SolidColorBrush x:Key="theme_bg" Color="{StaticResource ColorBackground00}" />
+    <SolidColorBrush x:Key="theme_fg" Color="{StaticResource ColorForeground00}" />
+    <SolidColorBrush x:Key="theme_fg_01" Color="{StaticResource ColorForeground01}" />
+    <SolidColorBrush x:Key="theme_icon" Color="{StaticResource ColorForeground01}" />
+    <SolidColorBrush x:Key="window_border" Color="#330000" />
+
+    <!--  ScrollViewer  -->
+    <SolidColorBrush x:Key="theme_scrollviewer_bg" Color="{StaticResource ColorBackground01}" />
+
+    <!--  ScrollBar  -->
+    <SolidColorBrush x:Key="theme_scrollbar_bg" Color="{StaticResource ColorStateHover}" />
+    <SolidColorBrush x:Key="theme_scrollbar_fg" Color="{StaticResource ColorForeground01}" />
+    <SolidColorBrush x:Key="theme_scrollbar_border_brush" Color="{StaticResource ColorForeground01}" />
+    <SolidColorBrush x:Key="theme_scrollbar_thumb" Color="{StaticResource ColorButtonBrush}" />
+    <SolidColorBrush x:Key="theme_scrollbar_thumb_hover" Color="{StaticResource ColorStateSelect}" />
+    <SolidColorBrush x:Key="theme_scrollbar_thumb_pressed" Color="{StaticResource ColorBackground04}" />
+    <SolidColorBrush x:Key="theme_scrollbar_arrow_hover" Color="{StaticResource ColorStateSelect}" />
+
+    <!--  ComboBox  -->
+    <SolidColorBrush x:Key="theme_combobox_bg" Color="{StaticResource ColorBackground03}" />
+    <SolidColorBrush x:Key="theme_combobox_fg" Color="{StaticResource ColorForeground00}" />
+    <SolidColorBrush x:Key="theme_combobox_popup_bg" Color="{StaticResource ColorStateSelect}" />
+    <SolidColorBrush x:Key="theme_combobox_item_hover_bg" Color="{StaticResource ColorButtonHover}" />
+
+    <!--  RadioButton  -->
+    <SolidColorBrush x:Key="theme_radiobutton_bg01" Color="{StaticResource ColorStateSelect}" />
+    <SolidColorBrush x:Key="theme_radiobutton_fg01" Color="{StaticResource ColorStateSelect}" />
+    <!--#endregion-->
+</ResourceDictionary>
