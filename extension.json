@@ -1,0 +1,13 @@
+{
+  "builtin": false,
+  "type": "extension",
+  "rocket_mode_compatible": true,
+  "name": "pyChaiDev",
+  "description": "Automation scripts for Revit",
+  "author": "Smit Bangare",
+  "author_profile": "https://github.com/smit-8462",
+  "url": "https://github.com/smit-8462/pyChai.git",
+  "website": "https://github.com/smit-8462/pyChai",
+  "image": "",
+  "dependencies": []
+}
