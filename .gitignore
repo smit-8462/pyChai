@@ -1,0 +1,47 @@
+# VSCode
+#/.vscode/
+.DS_Store
+*.swp
+
+# PyCharm
+/.idea/
+*.iws
+out/
+workspace.xml
+.idea
+
+# Virtual Environment
+/.venv/
+/venv/
+.env
+.envrc
+.venv
+
+# Temporary files (it is just a playground)
+/tmp/
+tmp/*
+
+# Logs
+*.log
+
+# Python specific files
+__pycache__/
+*.py[cod]
+*.py[codz]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/!/.idea/workspace.xml
+
+# Site Packages
+site-packages/
