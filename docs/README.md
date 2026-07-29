@@ -1,10 +1,18 @@
 <div align="center">
-    <a href="https://github.com/smit-8462/pyChai">
-        <img src="../assets/pyChai_logo.svg" alt="pyChai" width="200">
-    </a>
-    <h1>🍵 | pyChai | pyRevit Extension</h1>
+  <a href="https://github.com/smit-8462/pyChai">
+    <img src="../assets/pyChai_logo.svg" alt="pyChai" width="200">
+  </a>
+  <br>
+  <a>
+    <img src="https://img.shields.io/badge/Github_Profile-black?style=for-the-badge&logo=github&link=https%3A%2F%2Fgithub.com%2Fsmit-8462">
+    <img src="https://img.shields.io/badge/Kaadya_Blog-f1e6ca?style=for-the-badge&logo=mocha&link=https%3A%2F%2Fsmit-8462.github.io%2F">
+    <img src="https://img.shields.io/badge/LinkedIn_Profile-0077b5?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMjU2JyBoZWlnaHQ9JzI1NicgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSd4TWlkWU1pZCcgdmlld0JveD0nMCAwIDI1NiAyNTYnPjxwYXRoIGQ9J00yMTguMTIzIDIxOC4xMjdoLTM3LjkzMXYtNTkuNDAzYzAtMTQuMTY1LS4yNTMtMzIuNC0xOS43MjgtMzIuNC0xOS43NTYgMC0yMi43NzkgMTUuNDM0LTIyLjc3OSAzMS4zNjl2NjAuNDNoLTM3LjkzVjk1Ljk2N2gzNi40MTN2MTYuNjk0aC41MWEzOS45MDcgMzkuOTA3IDAgMCAxIDM1LjkyOC0xOS43MzNjMzguNDQ1IDAgNDUuNTMzIDI1LjI4OCA0NS41MzMgNTguMTg2bC0uMDE2IDY3LjAxM1pNNTYuOTU1IDc5LjI3Yy0xMi4xNTcuMDAyLTIyLjAxNC05Ljg1Mi0yMi4wMTYtMjIuMDA5LS4wMDItMTIuMTU3IDkuODUxLTIyLjAxNCAyMi4wMDgtMjIuMDE2IDEyLjE1Ny0uMDAzIDIyLjAxNCA5Ljg1MSAyMi4wMTYgMjIuMDA4QTIyLjAxMyAyMi4wMTMgMCAwIDEgNTYuOTU1IDc5LjI3bTE4Ljk2NiAxMzguODU4SDM3Ljk1Vjk1Ljk2N2gzNy45N3YxMjIuMTZaTTIzNy4wMzMuMDE4SDE4Ljg5QzguNTgtLjA5OC4xMjUgOC4xNjEtLjAwMSAxOC40NzF2MjE5LjA1M2MuMTIyIDEwLjMxNSA4LjU3NiAxOC41ODIgMTguODkgMTguNDc0aDIxOC4xNDRjMTAuMzM2LjEyOCAxOC44MjMtOC4xMzkgMTguOTY2LTE4LjQ3NFYxOC40NTRjLS4xNDctMTAuMzMtOC42MzUtMTguNTg4LTE4Ljk2Ni0xOC40NTMnIGZpbGw9JyNmZmYnLz48L3N2Zz4K&link=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fsmit-bangare-b04176186%2F">
+  </a>
+  <a>
+  <h1 style="border-bottom: none; margin-bottom: 0; margin-top: 10px;">pyChai</h1>
+  <h2 style="margin-top: 0;">pyRevit Extension for Revit</h2>
+  </a>
 </div>
-
 
 ## Introduction
 
@@ -14,22 +22,29 @@ For detailed documentation, visit [Kaadya](https://smit-8462.github.io/), where 
 
 > Take a sip of chai🍵 and relax.
 
+[Jump to Install section](#install)
+
 ---
 ## Tools
 
-Currently, pyChai has following major tools under its arsenal, with more automation scripts planned in near future -
+Currently, pyChai has following major tools under its arsenal, with more tools planned in future -
 
-| Tool                                 | Notes                                       |
-|--------------------------------------|-----------------------------------------------|
-|  Parameter Mapper  |  Apply values on instance parameters of multiple Revit elements from a spreadsheet file  |
-<!-- |  Bulk Renamer  |  Rename family types (Built-in/Loaded) based on Revit type parameters  | -->
+| Tool  | Notes  | Compatible  |
+| :-- | :-- | :-- |
+|  Parameter Mapper  |  Apply values on instance parameters of multiple Revit elements from a spreadsheet file  |  Revit 2020 - Revit 2027  |
+<!-- |  Bulk Renamer  |  Rename family types (Built-in/Loaded) based on Revit type parameters  |  Revit 2020 - Revit 2027  | -->
 
 
-1. Parameter Mapper  
-    - The automation tool spice up the mundane data-entry tasks of filling up values in elements parameters. 
-    - The values are extracted from a spreadsheet file (Excel / LibreOffice Calc / CSV) and then applied to element's instance parameters.
-    - It gives users option to select any Revit category, along with choice of parameters for applying.
-    - The tool has data validation built-in, preventing the wrong data type apply.
+### Parameter Mapper  
+> [!NOTE]
+> The Revit project's units will be considered when implementing the numerical values from spreadsheet file (Excel / LibreOffice Calc / CSV).
+
+- The automation tool spice up the mundane data-entry tasks of filling upvalues in elements parameters. 
+- The values are extracted from a spreadsheet file (Excel / LibreOffice Calc / CSV) and then applied to element's instance parameters.
+- It gives users option to select any Revit category, along with choice ofparameters for applying.
+- The tool has data validation built-in, preventing the wrong data type apply.
+
+
 
 ---
 ## Install
@@ -69,9 +84,11 @@ There are 2 ways to install pyChai plugin -
 5. Create a folder named `pyChai.extension`.  
     ![ManualInstall_05.png](../assets/ManualInstall_05.png)
 6. Extract the contents of recently downloaded `.zip` file to `pyChai.extension` folder.
-7. In Revit, go to `pyRevit` tab. Click on `Reload` button.  
+7. Now, there will be a `python-packages-site-packages.zip` file in `bin\python_package_zip` folder location.
+8. Extract the `python-packages-site-packages.zip` file contents in `pyChai.extension` folder.
+9. In Revit, go to `pyRevit` tab. Click on `Reload` button.  
     ![ManualInstall_06.png](../assets/ManualInstall_06.png)
-8. `pyChai` extension has been successfully installed. Congratulations 🎊! 
+10. `pyChai` extension has been successfully installed. Congratulations 🎊! 
 
 </details>
 
@@ -89,7 +106,7 @@ There are 2 ways to uninstall/remove the pyChai plugin -
     pyrevit extensions delete pyChai
     ```
 3. Press Enter.
-4. `pyChai` extension has been successfully installed. OUCH 🌧️!
+4. `pyChai` extension has been successfully uninstalled. OUCH 🌧️!
 
 </details>
 
@@ -103,7 +120,7 @@ There are 2 ways to uninstall/remove the pyChai plugin -
     ```
 2. In Revit, go to `pyRevit` tab. Click on `Reload` button.  
     ![ManualInstall_06.png](../assets/ManualInstall_06.png)
-3. `pyChai` extension has been successfully installed. OUCH 🌧️!
+3. `pyChai` extension has been successfully uninstalled. OUCH 🌧️!
 
 </details>
 
@@ -149,7 +166,7 @@ There are 2 ways to uninstall/remove the pyChai plugin -
     ```txt
     %appdata%\pyRevit\pyRevit_config.ini
     ```
-- Delete the lines having `[pyChaiConfigs]`, `cpython_exe_location`, `cpython_plugin_lib_location` & `cpython_external_location` .
+- Delete the lines containing `[pyChaiConfigs]`, `cpython_exe_location`, `cpython_plugin_lib_location` & `cpython_external_location` .
 - Save the file and close it.
 - Now, open the "Parameter Mapper" tool, and try again. It will work.
 </details>
@@ -174,6 +191,3 @@ There are 2 ways to uninstall/remove the pyChai plugin -
 ---
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[kaadya-blog]: https://smit-8462.github.io/
-<!-- [linkedin-shield]: 
-[linkedin-profile]: https://www.linkedin.com/in/smit-bangare-b04176186/ -->
