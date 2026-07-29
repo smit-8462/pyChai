@@ -7,6 +7,7 @@ $PythonPackagesZipName = "python-packages-site-packages.zip"
 $ExtensionPath = "$($env:APPDATA)\pyRevit\Extensions\$($ExtensionName).extension"
 $ZipPath = "$($ExtensionPath)\bin\python_package_zip\$($PythonPackagesZipName)"
 $SitePackagesPath = "$($ExtensionPath)\site-packages"
+# $NotNeededFolderList = @("assets", "docs", "bin", "scripts")
  
 pyrevit extend ui $ExtensionName $RepoUrl --branch=$Branch
 
@@ -26,6 +27,15 @@ if ($LASTEXITCODE -eq 0) {
         # Extracting ZIP
         Expand-Archive -Path $ZipPath -DestinationPath $SitePackagesPath -Force
         Write-Host "ZIP contents extracted successfully at path = $($SitePackagesPath)"
+
+        # # Removing unnecessary files
+        # foreach ($folderName in $NotNeededFolderList) {
+        #     <# $folderName is the current item #>
+        #     $folderPath = "$($ExtensionPath)\$($folderName)"
+        #     if (Test-Path $folderPath) {
+        #         Remove-Item -Path $folderName -Recurse -Force
+        #     }
+        # }
 
         Write-Host "Congratulations🎊! pyChai extension is installed successfully."
     }
