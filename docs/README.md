@@ -5,6 +5,7 @@
   <br>
   <h1>pyChai</h1>
 </div>
+
 <!-- <div align="center">
   <a href="https://github.com/smit-8462/pyChai"><img src="../assets/pyChai_logo.svg" alt="pyChai" width="200"></a>
   <br>
