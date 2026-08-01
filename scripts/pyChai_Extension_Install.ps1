@@ -25,8 +25,8 @@ if ($LASTEXITCODE -eq 0) {
         }
 
         # Extracting ZIP
-        Expand-Archive -Path $ZipPath -DestinationPath $SitePackagesPath -Force
-        Write-Host "ZIP contents extracted successfully at path = $($SitePackagesPath)"
+        Expand-Archive -Path $ZipPath -DestinationPath $ExtensionPath -Force
+        Write-Host "ZIP contents extracted successfully at path = $($ExtensionPath)"
 
         # # Removing unnecessary files
         # foreach ($folderName in $NotNeededFolderList) {
