@@ -4,7 +4,7 @@ from pyrevit import forms, script
 # wpf can be imported only after pyrevit.forms
 import wpf, os, clr, traceback
 
-from Autodesk.Revit.DB import Parameter, UnitUtils, StorageType, Transaction, ElementId
+from Autodesk.Revit.DB import Parameter, UnitUtils, StorageType, Transaction, ElementId, Group
 from Autodesk.Revit.UI import TaskDialog
 
 clr.AddReference("System")
@@ -142,7 +142,8 @@ class ParameterApplication(object):
 				if elem.Document.IsLinked:
 					elem_id = elem.Id.Value if rvt_year > 2023 else elem.Id.IntegerValue
 					if elem_id not in skipped_elem_ids:
-						msg01 = "Element `{}` (Id {}) is part of a linked model, so it was skipped.".format(elem.Name, elem_id)
+						linked_doc_name = elem.Document.Title
+						msg01 = "Skipped - Element `{}` (Id `{}`) is part of linked model `{}`.".format(elem.Name, elem_id, linked_doc_name)
 						self._elements_skipped_errors.append(msg01)
 						skipped_elem_ids.append(elem_id)
 						continue
@@ -151,7 +152,9 @@ class ParameterApplication(object):
 				if elem.GroupId != ElementId.InvalidElementId:
 					elem_id = elem.Id.Value if rvt_year > 2023 else elem.Id.IntegerValue
 					if elem_id not in skipped_elem_ids:
-						msg01 = "Element `{}` (Id {}) is part of a group, so it was skipped.".format(elem.Name, elem_id)
+						group_object = doc.GetElement(elem.GroupId)		# type: Group
+						group_name = group_object.Name
+						msg01 = "Skipped - Element `{}` (Id `{}`) is part of group `{}`.".format(elem.Name, elem_id, group_name)
 						self._elements_skipped_errors.append(msg01)
 						skipped_elem_ids.append(elem_id)
 						continue
