@@ -5,3 +5,4 @@
 
 ${md_incompatible_elements_section}
 ${md_skipped_parameters_section}
+${md_skipped_elements_section}

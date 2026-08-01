@@ -4,11 +4,12 @@ from pyrevit import forms, script
 # wpf can be imported only after pyrevit.forms
 import wpf, os, clr, traceback
 
-from Autodesk.Revit.DB import Parameter, UnitUtils, StorageType, Transaction
+from Autodesk.Revit.DB import Parameter, UnitUtils, StorageType, Transaction, ElementId
 from Autodesk.Revit.UI import TaskDialog
 
 clr.AddReference("System")
 
+from Models.mo_failure_preprocessors import GroupEditPreProcessor
 # ===============
 # ---> VARIABLES <---
 uidoc = __revit__.ActiveUIDocument
@@ -43,6 +44,7 @@ class ParameterApplication(object):
 		self._mapped_dict = mapped_dict
 		self._param_tuple_list = []
 		self._paramters_readonly_string_errors = []
+		self._elements_skipped_errors = []
 
 	@staticmethod
 	def _get_builtin_parameter(elem, param_type_recognize_object):
@@ -124,11 +126,36 @@ class ParameterApplication(object):
 	def _parameters_apply_old_method(self):
 		"""Normal method."""
 		tr = Transaction(doc, "Setting Multiple Parameters")
+		f_opts = tr.GetFailureHandlingOptions()
+		f_opts.SetFailuresPreprocessor(GroupEditPreProcessor())
+		tr.SetFailureHandlingOptions(f_opts)
 		tr.Start()
 		try:
+			skipped_elem_ids = []	# Temporary collection of skipped elements
+
 			for tuple_val in self._param_tuple_list:
 				param_object = tuple_val[0]		# type: Parameter
 				param_value = tuple_val[1]		# Parameter value
+				elem = param_object.Element
+
+				# Skip elements which are part of linked model.
+				if elem.Document.IsLinked:
+					elem_id = elem.Id.Value if rvt_year > 2023 else elem.Id.IntegerValue
+					if elem_id not in skipped_elem_ids:
+						msg01 = "Element `{}` (Id {}) is part of a linked model, so it was skipped.".format(elem.Name, elem_id)
+						self._elements_skipped_errors.append(msg01)
+						skipped_elem_ids.append(elem_id)
+						continue
+
+				# Skip elements which are in a group, to bypass group-edit mode
+				if elem.GroupId != ElementId.InvalidElementId:
+					elem_id = elem.Id.Value if rvt_year > 2023 else elem.Id.IntegerValue
+					if elem_id not in skipped_elem_ids:
+						msg01 = "Element `{}` (Id {}) is part of a group, so it was skipped.".format(elem.Name, elem_id)
+						self._elements_skipped_errors.append(msg01)
+						skipped_elem_ids.append(elem_id)
+						continue
+
 				if not param_object.IsReadOnly:
 					param_object.Set(param_value)
 				else:
@@ -155,3 +182,6 @@ class ParameterApplication(object):
 
 	def return_skipped_parameters_list(self):
 		return self._paramters_readonly_string_errors
+
+	def return_skipped_elements_list(self):
+		return self._elements_skipped_errors

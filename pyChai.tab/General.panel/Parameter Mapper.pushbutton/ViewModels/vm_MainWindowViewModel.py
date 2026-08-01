@@ -58,15 +58,17 @@ class MainWindowViewModel(ViewModelBase):
 		template_md_file_list = ["TemplateOutput01.md", "TemplateOutput02.md"]
 		_errors_count = self.ElementSelection.ElementsErrorsValidated
 		_skipped_params_count = self.ElementSelection.ReadOnlyParametersCount
+		_skipped_elements_count = self.ElementSelection.SkippedElementsDueToErrorsCount
 		template_variables = {
 			"md_elem_total_count": self.ElementSelection.ElementsTotal,
 			"md_elem_success_count": self.ElementSelection.ElementsSuccess,
-			"md_elem_skipped_count": self.ElementSelection.ElementsSkipped,
+			"md_elem_failed_count": self.ElementSelection.ElementsFailed,
 			"md_file_spreadsheet": self.FileSelection.SelectedFilePath,
 			"md_elem_errors_count": _errors_count,
 			"md_elem_readonly_count": _skipped_params_count,
 			"md_incompatible_elements_section": "",
-			"md_skipped_parameters_section": ""
+			"md_skipped_parameters_section": "",
+			"md_skipped_elements_section": ""
 		}
 
 		if _errors_count > 0:
@@ -83,6 +85,14 @@ class MainWindowViewModel(ViewModelBase):
 				"### Skipped Parameters\n\n"
 				"The following were skipped due to read-only parameter -\n\n"
 				"{}\n\n---\n".format(skipped_readonly_list_string)
+			)
+		if _skipped_elements_count > 0:
+			skipped_elements_string = self.ElementSelection.SkippedElementsDueToErrorsString if self.ElementSelection.HasPreviewWindowOpened and \
+				self._preview_window_vm is not None and self._preview_window_vm.HasUserClickedOnFinalApplyButton is True else ""
+			template_variables["md_skipped_elements_section"] = (
+				"### Skipped Elements\n\n"
+				"The following elements were skipped -\n\n"
+				"{}\n\n---\n".format(skipped_elements_string)
 			)
 
 		sys_md = SysOutput_Markdown(PY_SCRIPT_PATH, template_md_file_list, template_variables)
@@ -235,10 +245,11 @@ class ElementSelection_MainWindow(ViewModelBase):
 		self._category_selection = category_selection	# reference to shared instance
 		self.element_list = None
 
-		self._elements_skipped = 0				# Elements skipped based on Excel rows mapping.
+		self._elements_skipped = 0				# Elements skipped based on Excel rows mapping. Also include elements skipped duting transaction.
 		self._elements_errors_validated = 0		# Elements which are shown as error based on WPF DataTable validation.
 		self._has_preview_window_opened = False  # Cheking if PreviewWindow is opened
 		self._readonly_parameters = []
+		self._skipped_elements_due_to_errors = []
 
 	# Property
 	# -------------------
@@ -254,6 +265,19 @@ class ElementSelection_MainWindow(ViewModelBase):
 		self.OnPropertyChanged("SkippedParametersReadonlyString")
 
 	@property
+	def SkippedElementsDueToErrors(self):
+		return self._skipped_elements_due_to_errors
+
+	@SkippedElementsDueToErrors.setter
+	def SkippedElementsDueToErrors(self, value):
+		self._skipped_elements_due_to_errors = value
+		self.OnPropertyChanged("SkippedElementsDueToErrors")
+		self.OnPropertyChanged("SkippedElementsDueToErrorsCount")
+		self.OnPropertyChanged("SkippedElementsDueToErrorsString")
+		self.OnPropertyChanged("ElementsFailed")   # depends on ElementsSkipped
+		self.OnPropertyChanged("ElementsSuccess")  # depends on ElementsFailed
+
+	@property
 	def SkippedParametersReadonlyString(self):
 		combined_string = ""
 		for idx, items in enumerate(self.ReadOnlyParameters):
@@ -261,8 +285,19 @@ class ElementSelection_MainWindow(ViewModelBase):
 		return combined_string
 
 	@property
+	def SkippedElementsDueToErrorsString(self):
+		combined_string = ""
+		for idx, items in enumerate(self.SkippedElementsDueToErrors):
+			combined_string += "{}. {}".format(idx + 1, items) + "\n"
+		return combined_string
+
+	@property
 	def ReadOnlyParametersCount(self):
 		return len(self.ReadOnlyParameters)
+
+	@property
+	def SkippedElementsDueToErrorsCount(self):
+		return len(self.SkippedElementsDueToErrors)
 
 	@property
 	def HasPreviewWindowOpened(self):
@@ -293,7 +328,7 @@ class ElementSelection_MainWindow(ViewModelBase):
 
 	@property
 	def ElementsFailed(self):
-		return self.ElementsSkipped + self.ElementsErrorsValidated
+		return self.ElementsSkipped + self.ElementsErrorsValidated + self.SkippedElementsDueToErrorsCount
 
 	@property
 	def SelectedElements(self):

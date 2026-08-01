@@ -24,20 +24,18 @@ Currently, pyChai has following major tools under its arsenal, with more tools p
 
 | Tool  | Notes  | Compatible  |
 | :-- | :-- | :-- |
-|  Parameter Mapper  |  Apply values on instance parameters of multiple Revit elements from a spreadsheet file  |  Revit 2020 - Revit 2027  |
+|  **Parameter Mapper**  |  <ul><li>Apply values on instance parameters of multiple Revit elements from a spreadsheet file. </ul></li><ul><li> For detailed documentation, [click here](https://smit-8462.github.io/posts/pychai-parameter-mapper/). </ul></li>  |  Revit 2020 till Revit 2027  |
 <!-- |  Bulk Renamer  |  Rename family types (Built-in/Loaded) based on Revit type parameters  |  Revit 2020 - Revit 2027  | -->
 
 
 ### Parameter Mapper  
-> [!NOTE]
-> The Revit project's units will be considered when implementing the numerical values from spreadsheet file (Excel / LibreOffice Calc / CSV).
 
-- The automation tool spice up the mundane data-entry tasks of filling upvalues in elements parameters. 
+- The automation tool spice up the mundane data-entry tasks of filling up values in elements parameters. 
 - The values are extracted from a spreadsheet file (Excel / LibreOffice Calc / CSV) and then applied to element's instance parameters.
 - It gives users option to select any Revit category, along with choice ofparameters for applying.
 - The tool has data validation built-in, preventing the wrong data type apply.
-
-
+- [Click here](https://smit-8462.github.io/posts/pychai-parameter-mapper/#notes) to read notes for greater clarity regarding the tool.
+- [Click here](https://smit-8462.github.io/posts/pychai-parameter-mapper/#final-product) to view Parameter Mapper tool screenshots.
 
 ---
 ## Install
@@ -180,7 +178,3 @@ There are 2 ways to uninstall/remove the pyChai plugin -
 </details>
 
 </details>
-
----
-
-<!-- MARKDOWN LINKS & IMAGES -->
