@@ -6,8 +6,7 @@ $Branch        = "main"
 $PythonPackagesZipName = "python-packages-site-packages.zip"
 $ExtensionPath = "$($env:APPDATA)\pyRevit\Extensions\$($ExtensionName).extension"
 $ZipPath = "$($ExtensionPath)\bin\python_package_zip\$($PythonPackagesZipName)"
-# $SitePackagesPath = "$($ExtensionPath)\site-packages"
-$NotNeededFolderList = @("assets", "docs", "bin", "scripts")
+# $NotNeededFolderList = @("assets", "docs", "bin", "scripts")
  
 pyrevit extend ui $ExtensionName $RepoUrl --branch=$Branch
 
@@ -17,26 +16,18 @@ if ($LASTEXITCODE -eq 0) {
     Write-Host "Extracting Python packages dependency..."
 
     if (Test-Path $ExtensionPath) {
-        # Check if folder path exists, if not then create folder
-        # if (-not (Test-Path $SitePackagesPath)) {
-        #     Write-Host "Folder missing!!!"
-        #     New-Item -ItemType Directory -Path $SitePackagesPath | Out-Null
-        #     Write-Host "Folder created successfully at path = $($SitePackagesPath)"
-        # }
-
         # Extracting ZIP
         Expand-Archive -Path $ZipPath -DestinationPath $ExtensionPath -Force
-        # Write-Host "ZIP contents extracted successfully at path = $($SitePackagesPath)"
         Write-Host "ZIP contents extracted successfully."
 
-        # Removing unnecessary files
-        foreach ($folderName in $NotNeededFolderList) {
-            <# $folderName is the current item #>
-            $folderPath = "$($ExtensionPath)\$($folderName)"
-            if (Test-Path $folderPath) {
-                Remove-Item -Path $folderPath -Recurse -Force
-            }
-        }
+        # # Removing unnecessary files
+        # foreach ($folderName in $NotNeededFolderList) {
+        #     <# $folderName is the current item #>
+        #     $folderPath = "$($ExtensionPath)\$($folderName)"
+        #     if (Test-Path $folderPath) {
+        #         Remove-Item -Path $folderPath -Recurse -Force
+        #     }
+        # }
 
         Write-Host "Congratulations🎊! pyChai extension is installed successfully."
     }
