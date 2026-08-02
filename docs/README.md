@@ -52,7 +52,7 @@ There are 2 ways to install pyChai plugin -
     ```
    ![ManualInstall_00.png](../assets/ManualInstall_00.png)
 3. Press Enter
-4. `pyChai` extension has been successfully installed. Congratulations 🎊!
+4. If below message is displayed in terminal, `pyChai` extension has been successfully installed. ![ManualInstall_01.png](../assets/ManualInstall_00x1.png)
 5. You can read Powershell script [here](https://github.com/smit-8462/pyChai/blob/main/scripts/pyChai_Extension_Install.ps1) in-depth for more information.
 
 </details>
