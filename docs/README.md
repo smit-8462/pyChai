@@ -24,18 +24,18 @@ Currently, pyChai has following major tools under its arsenal, with more tools p
 
 | Tool  | Notes  | Compatible  |
 | :-- | :-- | :-- |
-|  **Parameter Mapper**  |  <ul><li>Apply values on instance parameters of multiple Revit elements from a spreadsheet file. </ul></li><ul><li> For detailed documentation, [click here](https://smit-8462.github.io/posts/pychai-parameter-mapper/). </ul></li>  |  Revit 2020 till Revit 2027  |
+|  **Parameter Mapper**  |  <ul><li>Apply values on instance parameters of multiple Revit elements from a spreadsheet file.</ul></li><ul><li>For detailed documentation, [click here](https://smit-8462.github.io/posts/pychai-parameter-mapper/).</ul></li>  |  Revit 2020 till Revit 2027  |
 <!-- |  Bulk Renamer  |  Rename family types (Built-in/Loaded) based on Revit type parameters  |  Revit 2020 - Revit 2027  | -->
 
 
 ### Parameter Mapper  
 
-- The automation tool spice up the mundane data-entry tasks of filling up values in elements parameters. 
-- The values are extracted from a spreadsheet file (Excel / LibreOffice Calc / CSV) and then applied to element's instance parameters.
-- It gives users option to select any Revit category, along with choice ofparameters for applying.
-- The tool has data validation built-in, preventing the wrong data type apply.
-- [Click here](https://smit-8462.github.io/posts/pychai-parameter-mapper/#notes) to read notes for greater clarity regarding the tool.
-- [Click here](https://smit-8462.github.io/posts/pychai-parameter-mapper/#final-product) to view Parameter Mapper tool screenshots.
+- The tool speed up the mundane data-entry tasks of applying Revit instance parameter values (string/numerical). 
+- The values extracted from spreadsheet file (Excel/ LibreOffice Calc/CSV) are applied to Revit element's instance parameters.
+- Users have choice to select Revit category, along with choice of Revit instance parameters for applying.
+- The tool has data validation built-in, preventing the incorrect data type (string/float/integer/boolean).
+- [Click here](https://smit-8462.github.io/posts/pychai-parameter-mapper/#notes) to learn more about the tool.
+- [Click here](https://smit-8462.github.io/posts/pychai-parameter-mapper/#final-product) to view samples of Parameter Mapper.
 
 ---
 ## Install

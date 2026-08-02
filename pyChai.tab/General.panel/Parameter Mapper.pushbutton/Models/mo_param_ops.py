@@ -149,15 +149,16 @@ class ParameterApplication(object):
 						continue
 
 				# Skip elements which are in a group, to bypass group-edit mode
-				if elem.GroupId != ElementId.InvalidElementId:
+				grp_id = elem.GroupId
+				if grp_id != ElementId.InvalidElementId:
 					elem_id = elem.Id.Value if rvt_year > 2023 else elem.Id.IntegerValue
 					if elem_id not in skipped_elem_ids:
-						group_object = doc.GetElement(elem.GroupId)		# type: Group
+						group_object = doc.GetElement(grp_id)		# type: Group
 						group_name = group_object.Name
 						msg01 = "Skipped - Element `{}` (Id `{}`) is part of group `{}`.".format(elem.Name, elem_id, group_name)
 						self._elements_skipped_errors.append(msg01)
 						skipped_elem_ids.append(elem_id)
-						continue
+					continue
 
 				if not param_object.IsReadOnly:
 					param_object.Set(param_value)

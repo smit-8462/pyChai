@@ -18,7 +18,7 @@ class GroupEditPreProcessor(IFailuresPreprocessor):
 	def PreprocessFailures(self, failuresAccessor):
 		try:
 			failures = failuresAccessor.GetFailureMessages()
-			if failures.Count == 0:
+			if len(failures) == 0:
 				return FailureProcessingResult.Continue
 			
 			transac_name = failuresAccessor.GetTransactionName()
