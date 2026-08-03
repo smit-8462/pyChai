@@ -199,7 +199,7 @@ class PreviewWindowViewModel(ViewModelBaseValidation):
 		param_app.apply_parameter_values()
 		self._element_selection_vm.ReadOnlyParameters = param_app.return_skipped_parameters_list()
 		self._element_selection_vm.SkippedElementsDueToErrors = param_app.return_skipped_elements_list()
-		
+
 	def OnClosing(self, sender, event):
 		"""
 		Before the form is closed, everything must be disposed properly (including events, otherwise leaks will happen).

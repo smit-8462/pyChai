@@ -4,7 +4,7 @@ from pyrevit import forms, script
 # wpf can be imported only after pyrevit.forms
 import wpf, os, clr, traceback
 
-from Autodesk.Revit.DB import Parameter, UnitUtils, StorageType, Transaction, ElementId, Group
+from Autodesk.Revit.DB import Parameter, UnitUtils, StorageType, Transaction, ElementId, Group, SubTransaction, TransactionStatus, TransactionGroup
 from Autodesk.Revit.UI import TaskDialog
 
 clr.AddReference("System")
@@ -62,7 +62,6 @@ class ParameterApplication(object):
 		else:
 			return elem.get_Parameter(param_type_recognize_object)
 
-
 	def _gather_parameter_collection(self):
 		"""Collect all possible parameter object along with its value in a tuple list."""
 		# Excluding PrimarySort parameter column
@@ -80,7 +79,7 @@ class ParameterApplication(object):
 					rest_of_values = self._transposed_excel_dict[dict_key]
 					# Get parameter object based on shared / project / built-in
 					# Since Revit 2025, get_Parameter is not recommended for BuiltInParameters.
-					elem_param_object = None
+					elem_param_object = None		# type: Parameter
 					try:
 						if param_type == "Built-In":
 							elem_param_object = self._get_builtin_parameter(dict_elem, param_type_recognize_object)		# ForgeTypeID -> Built-in parameter
@@ -106,6 +105,7 @@ class ParameterApplication(object):
 							else:
 								# Normal integer
 								elem_param_internal_value = int(specific_value)
+							elem_present_value = elem_param_object.AsInteger()		# Get already present value
 						elif param_storagetype == StorageType.Double:
 							if param_value_unit_type is not None:
 								# Convert to double
@@ -114,30 +114,30 @@ class ParameterApplication(object):
 							else:
 								# Normal double
 								elem_param_internal_value = float(specific_value)
+							elem_present_value = elem_param_object.AsDouble()		# Get already present value
 						else:
 							# Normal string
 							elem_param_internal_value = str(specific_value)
+							elem_present_value = elem_param_object.AsString()		# Get already present value
 					except Exception as e:
 						print("Skipping value '{}' for parameter id {}: {}".format(specific_value, param_id, e))
 						continue
-					collect_tuple = (elem_param_object, elem_param_internal_value, param_storagetype)
+					collect_tuple = (elem_param_object, elem_param_internal_value, param_storagetype, elem_present_value)
 					self._param_tuple_list.append(collect_tuple)
 
-	def _parameters_apply_old_method(self):
-		"""Normal method."""
-		tr = Transaction(doc, "Setting Multiple Parameters")
-		f_opts = tr.GetFailureHandlingOptions()
-		f_opts.SetFailuresPreprocessor(GroupEditPreProcessor())
-		tr.SetFailureHandlingOptions(f_opts)
-		tr.Start()
-		try:
-			skipped_elem_ids = []	# Temporary collection of skipped elements
-
-			for tuple_val in self._param_tuple_list:
-				param_object = tuple_val[0]		# type: Parameter
-				param_value = tuple_val[1]		# Parameter value
+	def _filter_candidate_tuples(self):
+		"""
+		One-time pass check over self._param_tuple_list that skips linked model/group member/read-only/already matching value elements
+		(just like FilteredElementCollector's WherePasses method), and returns the remaining tuples which will be used to apply parameter values.
+		"""
+		candidate_tuples = []	# List of tuples which will be used for setting values
+		skipped_elem_ids = []	# Temporary collection of skipped elements (linked/group)
+		for tuple_val in self._param_tuple_list:
+			param_object = tuple_val[0]		# type: Parameter
+			param_internal_value = tuple_val[1]		# Parameter value
+			already_value = tuple_val[3]	# Already present value
+			if not param_internal_value == already_value:
 				elem = param_object.Element
-
 				# Skip elements which are part of linked model.
 				if elem.Document.IsLinked:
 					elem_id = elem.Id.Value if rvt_year > 2023 else elem.Id.IntegerValue
@@ -147,7 +147,7 @@ class ParameterApplication(object):
 						self._elements_skipped_errors.append(msg01)
 						skipped_elem_ids.append(elem_id)
 						continue
-
+					
 				# Skip elements which are in a group, to bypass group-edit mode
 				grp_id = elem.GroupId
 				if grp_id != ElementId.InvalidElementId:
@@ -159,30 +159,100 @@ class ParameterApplication(object):
 						self._elements_skipped_errors.append(msg01)
 						skipped_elem_ids.append(elem_id)
 					continue
-
-				if not param_object.IsReadOnly:
-					param_object.Set(param_value)
-				else:
-					msg01= "Element `{}` has readonly parameter `{}`".format(param_object.Element.Name, param_object.Definition.Name)
+				
+				if param_object.IsReadOnly:
+					msg01 = "Element `{}` has readonly parameter `{}`".format(param_object.Element.Name, param_object.Definition.Name)
 					self._paramters_readonly_string_errors.append(msg01)
-					pass
-			tr.Commit()
+					continue
+			
+				candidate_tuples.append(tuple_val)
+			else:
+				pass	# The existing & future values are already matching, so it will be skipped.
+		return candidate_tuples
+
+	def _transac_options(self, existing_transaction):
+		f_opts = existing_transaction.GetFailureHandlingOptions()
+		f_opts.SetFailuresPreprocessor(GroupEditPreProcessor())
+		f_opts.SetForcedModalHandling(False)
+		f_opts.SetClearAfterRollback(True)
+		existing_transaction.SetFailureHandlingOptions(f_opts)
+
+	def _apply_bulk(self, tuples_to_apply):
+		"""
+		This is a fast transaction process, since it is dealing in with a single whole transaction.
+		The rejected elements inside this fast transaction will be dealt later using slow transaction process.
+		"""
+		tr = Transaction(doc, "Setting Multiple Parameters (Bulk)")
+		self._transac_options(tr)
+		tr.Start()
+		try:
+			for tuple_val in tuples_to_apply:
+				param_object = tuple_val[0]		# type: Parameter
+				param_value = tuple_val[1]		# Value to be applied
+				param_object.Set(param_value)
+			status = tr.Commit()
+		except Exception as e:
+			if tr.GetStatus() == TransactionStatus.Started:
+				tr.RollBack()
+			status = TransactionStatus.RolledBack
+			print("Exception during bulk apply: {}\n{}".format(e, traceback.format_exc()))
+		return status == TransactionStatus.Committed
+
+	def _apply_slow_per_element(self, tuples_to_apply):
+		"""This is a slow transaction process, because we are regenerating document after every transaction."""
+		for tuple_val in tuples_to_apply:
+			param_object = tuple_val[0]		# type: Parameter
+			param_value = tuple_val[1]		# Value to be applied
+			elem = param_object.Element
+
+			elem_tr = Transaction(doc, "Set Parameter Value")
+			self._transac_options(elem_tr)
+			elem_tr.Start()
+			try:
+				param_object.Set(param_value)
+				doc.Regenerate()	# Since some element's parameter, for example, change width. So to correctly reflect, we need to regenerate model. 
+				status = elem_tr.Commit()
+			except Exception as e:
+				if elem_tr.GetStatus() == TransactionStatus.Started:
+					elem_tr.RollBack()
+				status = TransactionStatus.RolledBack
+				print("Exception setting parameter `{}` on element Id `{}`: {}".format(param_object.Definition.Name, elem.Id, e))
+
+			if status != TransactionStatus.Committed:
+				elem_id = elem.Id.Value if rvt_year > 2023 else elem.Id.IntegerValue
+				msg01 = "Skipped - Element `{}` (Id `{}`) could not accept value for parameter `{}`.".format(elem.Name, elem_id, param_object.Definition.Name)
+				self._elements_skipped_errors.append(msg01)
+
+	def _parameters_apply_batched(self):
+		t_group = TransactionGroup(doc, "Setting Multiple Parameters")
+		t_group.Start()
+		try:
+			candidate_tuples = self._filter_candidate_tuples()		# Get tuples
+			if not candidate_tuples:
+				t_group.Assimilate()
+				return True
+			
+			committed = self._apply_bulk(candidate_tuples)			# Fast transaction
+			if not committed:						# Proceed only if bulk transaction failed.
+				self._apply_slow_per_element(candidate_tuples)		# Slow transaction
+			t_group.Assimilate()
 			return True
 		except Exception as e:
-			tr.RollBack()
+			if t_group.GetStatus() == TransactionStatus.Started:
+				t_group.RollBack()
 			TaskDialog.Show("Error", "Parameters not applied. Check the values in the selected spreadsheet file.")
 			print("Transaction failed: {}\n{}\n{}".format(e, '-' * 25, traceback.format_exc()))
 			return False
 
 	def apply_parameter_values(self):
-		"""Apply parameter values."""
+		"""Public method for applying parameter values."""
 		try:
 			self._gather_parameter_collection()
 		except Exception as e:
 			TaskDialog.Show("Error", "Failed to prepare parameter values. Check the spreadsheet data.")
 			print("Gathering failed: {}\n{}\n{}".format(e, '-' * 25, traceback.format_exc()))
 			return False
-		return self._parameters_apply_old_method()
+		return self._parameters_apply_batched()
 
 	def return_skipped_parameters_list(self):
 		return self._paramters_readonly_string_errors

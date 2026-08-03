@@ -12,6 +12,7 @@ from System.Windows import Style, Setter, DataTrigger, DynamicResourceExtension
 from System.Windows.Controls import DataGridCell
 from System.Windows.Data import Binding
 
+# Import from shared libs
 from lib_WPF.ViewModels.vm_WindowBottomBarViewModel import WindowBottomBarViewModel
 
 from lib_WPF.Helpers.he_View_WindowBase import WindowBase
@@ -172,15 +173,12 @@ class PreviewWindow(WindowBase):
 		if not success:
 			TaskDialog.Show("Error", "Failed to apply parameter values.")
 			return
+		self.Close()	# Close PreviewWindow after transaction is complete
 
 		mesa = "Element parameter values successfully applied!\n\nChoose to following options - "
 		res = forms.alert(msg=mesa, title="Success", footer="Success", warn_icon=None,
 		                  options=["Show report", "Continue working with tool", "Exit"])
 		if res == "Show report":
 			self._main_vm.markdown_output()
-			self.Close()
 		elif res == "Continue working with tool":
 			self._main_window.Show()  # restore original window at its position
-			self.Close()
-		else:
-			self.Close()

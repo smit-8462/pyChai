@@ -6,6 +6,7 @@ import wpf, os, clr, traceback
 from Autodesk.Revit.UI import TaskDialog, ExternalEvent
 
 clr.AddReference("System")
+from System.Windows import WindowState
 
 # Import from shared libs
 from lib_WPF.ViewModels.vm_WindowBottomBarViewModel import WindowBottomBarViewModel
@@ -102,6 +103,10 @@ class MainWindow(WindowBase):
 			self.vm_mainWindow.select_elements("manual")
 		except Exception as e:
 			print("Transaction failed: {}\n{}\n{}".format(e, '-' * 25, traceback.format_exc()))
+		# Restore window on top after manual selection, since it used to go behind.
+		if self.WindowState == WindowState.Minimized:
+			self.WindowState = WindowState.Normal
+		self.Activate()
 
 	def ButtonEvent_Main_SelectAll(self, sender, event):
 		try:
