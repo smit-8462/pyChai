@@ -37,15 +37,6 @@ Currently, pyChai has following major tools under its arsenal, with more tools p
 - [Click here](https://smit-8462.github.io/posts/pychai-parameter-mapper/#notes) to learn more about the tool.
 - [Click here](https://smit-8462.github.io/posts/pychai-parameter-mapper/#final-product) to view samples of Parameter Mapper.
 
-<div class="video-container">
-  <iframe
-    src="https://www.youtube.com/embed/CXFiw9HfTFE"
-    title="pyChai - Parameter Mapper"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen>
-  </iframe>
-</div>
 
 ---
 ## Install
