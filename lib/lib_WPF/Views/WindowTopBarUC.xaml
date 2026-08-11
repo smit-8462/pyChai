@@ -81,6 +81,7 @@
             <TextBlock
                 x:Name="tb_title"
                 Margin="8,0,0,0"
+                IsHitTestVisible="False"
                 Style="{DynamicResource CustomTextBlock_WindowTitle}"
                 Text="{Binding Title, ElementName=WindowTop}" />
         </StackPanel>
