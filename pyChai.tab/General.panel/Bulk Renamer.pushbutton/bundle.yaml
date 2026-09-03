@@ -1,0 +1,24 @@
+title: |
+  Bulk
+  Renamer
+
+tooltip: |
+  Bulk rename Built-in/Family type name, using type parameters.
+  
+  Usage - 
+    1. Launch script.
+    2. Pick between "Family Type", "Sheets", "Views" and "Levels"
+    3. Select elements from tree list.
+    4. Set a template for renaming, or pick from template.
+    5. Click "Apply" to rename.
+
+min_revit_version: 2020
+
+max_revit_version: 2027
+
+# Sice we are using non-modal WPF form with external event, therefore we need to activate the persistent engine flag.
+# pyRevit will not clear the scope for the tools that need a persistent engine.
+engine:
+  persistent: true
+
+author: "{{author1}}"

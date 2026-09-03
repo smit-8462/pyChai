@@ -72,6 +72,12 @@
     <Geometry x:Key="icon_arrow_chevron">M249.3 235.8c10.2 12.6 9.5 31.1-2.2 42.8l-128 128c-9.2 9.2-22.9 11.9-34.9 6.9S64.5 396.9 64.5 384l0-256c0-12.9 7.8-24.6 19.8-29.6s25.7-2.2 34.9 6.9l128 128 2.2 2.4z</Geometry>
     <Geometry x:Key="icon_expand_all">M168 32L24 32C10.7 32 0 42.7 0 56L0 200c0 9.7 5.8 18.5 14.8 22.2S34.1 223.8 41 217l40-40 79 79-79 79-40-40c-6.9-6.9-17.2-8.9-26.2-5.2S0 302.3 0 312L0 456c0 13.3 10.7 24 24 24l144 0c9.7 0 18.5-5.8 22.2-14.8s1.7-19.3-5.2-26.2l-40-40 79-79 79 79-40 40c-6.9 6.9-8.9 17.2-5.2 26.2S270.3 480 280 480l144 0c13.3 0 24-10.7 24-24l0-144c0-9.7-5.8-18.5-14.8-22.2s-19.3-1.7-26.2 5.2l-40 40-79-79 79-79 40 40c6.9 6.9 17.2 8.9 26.2 5.2S448 209.7 448 200l0-144c0-13.3-10.7-24-24-24L280 32c-9.7 0-18.5 5.8-22.2 14.8S256.2 66.1 263 73l40 40-79 79-79-79 40-40c6.9-6.9 8.9-17.2 5.2-26.2S177.7 32 168 32z</Geometry>
     <Geometry x:Key="icon_collapse_all">M456 224l-144 0c-13.3 0-24-10.7-24-24l0-144c0-9.7 5.8-18.5 14.8-22.2S322.1 32.2 329 39l40 40 73.4-73.4C446 2 450.9 0 456 0s10 2 13.7 5.7l36.7 36.7C510 46 512 50.9 512 56s-2 10-5.7 13.7L433 143 473 183c6.9 6.9 8.9 17.2 5.2 26.2S465.7 224 456 224zm0 64c9.7 0 18.5 5.8 22.2 14.8s1.7 19.3-5.2 26.2l-40 40 73.4 73.4c3.6 3.6 5.7 8.5 5.7 13.7s-2 10-5.7 13.7l-36.7 36.7C466 510 461.1 512 456 512s-10-2-13.7-5.7L369 433 329 473c-6.9 6.9-17.2 8.9-26.2 5.2S288 465.7 288 456l0-144c0-13.3 10.7-24 24-24l144 0zm-256 0c13.3 0 24 10.7 24 24l0 144c0 9.7-5.8 18.5-14.8 22.2s-19.3 1.7-26.2-5.2l-40-40-73.4 73.4C66 510 61.1 512 56 512s-10-2-13.7-5.7L5.7 469.7C2 466 0 461.1 0 456s2-10 5.7-13.7L79 369 39 329c-6.9-6.9-8.9-17.2-5.2-26.2S46.3 288 56 288l144 0zM56 224c-9.7 0-18.5-5.8-22.2-14.8S32.2 189.9 39 183L79 143 5.7 69.7C2 66 0 61.1 0 56S2 46 5.7 42.3L42.3 5.7C46 2 50.9 0 56 0S66 2 69.7 5.7L143 79 183 39c6.9-6.9 17.2-8.9 26.2-5.2S224 46.3 224 56l0 144c0 13.3-10.7 24-24 24L56 224z</Geometry>
+    <Geometry x:Key="icon_select_all_2">M316.7 0c-19.6 0-35.6 16-35.6 35.6V180.9c0 19.6 16 35.6 35.6 35.6H476.4c19.6 0 35.6-16 35.6-35.6V35.6C512 16 496 0 476.4 0H316.7ZM35.6 264.6C16 264.6 0 280.6 0 300.2V445.5c0 19.6 16 35.6 35.6 35.6H195.3c19.6 0 35.6-16 35.6-35.6V300.2c0-19.6-16-35.6-35.6-35.6H35.6Zm281 0c-19.6 0-35.6 16-35.6 35.6V445.5c0 19.6 16 35.6 35.6 35.6H476.4c19.6 0 35.6-16 35.6-35.6V300.2c0-19.6-16-35.6-35.6-35.6H316.7ZM35.6 0C16 0 0 16 0 35.6V180.9c0 19.6 16 35.6 35.6 35.6H195.3c19.6 0 35.6-16 35.6-35.6V35.6C231 16 214.9 0 195.3 0H35.6Z</Geometry>
+    <Geometry x:Key="icon_select_none_2">M205.7 27.8V205.7H27.8V27.8H205.7Zm0 278.5V484.2H27.8V306.3H205.7ZM23.8 278.5C10.7 278.5 0 289.2 0 302.3V488.2c0 13 10.8 23.8 23.8 23.8H209.7c13 0 23.8-10.8 23.8-23.8V302.3c0-13.1-10.7-23.8-23.8-23.8H23.8ZM484.2 27.8V205.7H306.3V27.8H484.2ZM302.3 0c-13.1 0-23.8 10.7-23.8 23.8V209.7c0 13.1 10.7 23.8 23.8 23.8H488.2c13 0 23.8-10.8 23.8-23.8V23.8C512 10.8 501.3 0 488.2 0H302.3ZM484.2 306.3V484.2H306.3V306.3H484.2ZM302.3 278.5c-13.2 0-23.8 10.7-23.8 23.8V488.2c0 6.5 2.7 12.4 7 16.8 4.4 4.3 10.3 7 16.8 7H488.2c13 0 23.8-10.8 23.8-23.8V302.3c0-13-10.8-23.8-23.8-23.8H302.3ZM23.8 0C10.7 0 0 10.7 0 23.8V209.7c0 13 10.7 23.8 23.8 23.8H209.7c13 0 23.8-10.8 23.8-23.8V23.8C233.5 10.7 222.8 0 209.7 0H23.8Z</Geometry>
+    <Geometry x:Key="icon_select_invert">M205.7 27.8V205.7H27.8V27.8H205.7ZM23.8 278.5C10.7 278.5 0 289.2 0 302.3V488.2c0 13 10.8 23.8 23.8 23.8H209.7c13 0 23.8-10.8 23.8-23.8V302.3c0-13.1-10.7-23.8-23.8-23.8H23.8ZM302.3 0c-13.1 0-23.8 10.7-23.8 23.8V209.7c0 13.1 10.7 23.8 23.8 23.8H488.2c13 0 23.8-10.8 23.8-23.8V23.8C512 10.8 501.3 0 488.2 0H302.3ZM484.2 306.3V484.2H306.3V306.3H484.2ZM302.3 278.5c-13.2 0-23.8 10.7-23.8 23.8V488.2c0 6.5 2.7 12.4 7 16.8 4.4 4.3 10.3 7 16.8 7H488.2c13 0 23.8-10.8 23.8-23.8V302.3c0-13-10.8-23.8-23.8-23.8H302.3ZM23.8 0C10.7 0 0 10.7 0 23.8V209.7c0 13 10.7 23.8 23.8 23.8H209.7c13 0 23.8-10.8 23.8-23.8V23.8C233.5 10.7 222.8 0 209.7 0H23.8Z</Geometry>
+    <Geometry x:Key="icon_arrow_up">M169.4 9.4c12.5-12.5 32.8-12.5 45.3 0l160 160c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L192 77.3 54.6 214.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160z</Geometry>
+    <Geometry x:Key="icon_arrow_down">M169.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 306.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z</Geometry>
+    <Geometry x:Key="icon_grid_splitter">M1 25h9V16H1v9Zm15 0h9V16H16v9Zm15 0h9V16H31v9Zm90 0h9V16h-9v9Zm15 0h9V16h-9v9Zm15 0h9V16h-9v9ZM1 40h9V31H1v9Zm15 0h9V31H16v9Zm15 0h9V31H31v9Zm15 0h9V1H46Zm30 0h9V1H76V40Zm30 0h9V1h-9V40Zm15 0h9V31h-9v9Zm15 0h9V31h-9v9Zm15 0h9V31h-9v9ZM61 55h9V16H61V55Zm30 0h9V16H91V55Z</Geometry>
 
     <!--  ******************  -->
     <!--  Base Icon Style  -->
@@ -88,6 +94,28 @@
     <Style x:Key="IconControlStyle" TargetType="ContentControl">
         <Setter Property="Width" Value="24" />
         <Setter Property="Height" Value="24" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ContentControl">
+                    <Viewbox Width="{TemplateBinding Width}" Height="{TemplateBinding Height}">
+                        <Path
+                            Data="{TemplateBinding Tag}"
+                            Fill="{TemplateBinding Foreground}"
+                            Style="{StaticResource BaseIconStyle}" />
+                    </Viewbox>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="IconControlStyle_GridSplitter" TargetType="ContentControl">
+        <Setter Property="Width" Value="24" />
+        <Setter Property="Height" Value="24" />
+        <Setter Property="LayoutTransform">
+            <Setter.Value>
+                <RotateTransform Angle="90" />
+            </Setter.Value>
+        </Setter>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ContentControl">
@@ -177,6 +205,52 @@
         </Style.Triggers>
     </Style>
 
+    <Style
+        x:Key="CustomButton_03_Error"
+        BasedOn="{StaticResource CustomButton_01}"
+        TargetType="Button">
+        <Setter Property="Padding" Value="6,0" />
+        <Setter Property="Background" Value="{DynamicResource theme_error_card_bg}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        x:Name="button_border"
+                        Width="{TemplateBinding Width}"
+                        Height="{TemplateBinding Height}"
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="4">
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="button_border" Property="Background" Value="{DynamicResource theme_button_hover}" />
+                            <Setter TargetName="button_border" Property="BorderThickness" Value="{DynamicResource thickness_border_01}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="button_border" Property="Background" Value="{DynamicResource theme_button_hover}" />
+                            <Setter TargetName="button_border" Property="BorderThickness" Value="{DynamicResource thickness_border_01}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Visibility" Value="Collapsed" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Padding" Value="5,0" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Padding" Value="5,0" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
     <Style x:Key="CustomButton_03_Transparent" TargetType="Button">
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="BorderBrush" Value="Transparent" />
@@ -210,9 +284,119 @@
         </Setter>
     </Style>
 
-    <!--#endregion-->
+    <Style
+        x:Key="CustomButton_04_PillRight"
+        BasedOn="{StaticResource CustomButton_01}"
+        TargetType="Button">
+        <Setter Property="Background" Value="{DynamicResource theme_button_bg02}" />
+        <Setter Property="BorderThickness" Value="0,1,1,1" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        x:Name="button_border"
+                        Width="{TemplateBinding Width}"
+                        Height="{TemplateBinding Height}"
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="0,8,8,0">
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="button_border" Property="Background" Value="{DynamicResource theme_button_hover}" />
+                            <Setter TargetName="button_border" Property="BorderThickness" Value="{StaticResource thickness_border_01}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="button_border" Property="Background" Value="{DynamicResource theme_button_hover}" />
+                            <Setter TargetName="button_border" Property="BorderThickness" Value="{StaticResource thickness_border_01}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
+    <Style
+        x:Key="CustomButton_04_PillLeft"
+        BasedOn="{StaticResource CustomButton_01}"
+        TargetType="Button">
+        <Setter Property="Background" Value="{DynamicResource theme_button_bg02}" />
+        <Setter Property="BorderThickness" Value="1,1,0,1" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        x:Name="button_border"
+                        Width="{TemplateBinding Width}"
+                        Height="{TemplateBinding Height}"
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="8,0,0,8">
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="button_border" Property="Background" Value="{DynamicResource theme_button_hover}" />
+                            <Setter TargetName="button_border" Property="BorderThickness" Value="{StaticResource thickness_border_01}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="button_border" Property="Background" Value="{DynamicResource theme_button_hover}" />
+                            <Setter TargetName="button_border" Property="BorderThickness" Value="{StaticResource thickness_border_01}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="CustomButton05" TargetType="Button">
+        <Setter Property="Background" Value="#c9e6f5" />
+        <Setter Property="Foreground" Value="{DynamicResource theme_label_cardtag_fg01}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource theme_label_cardtag_fg01}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Padding" Value="4,2" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Focusable" Value="False" />
+        <Setter Property="FontFamily" Value="{StaticResource font_family_default}" />
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        x:Name="button_border"
+                        Width="{TemplateBinding Width}"
+                        Height="{TemplateBinding Height}"
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{StaticResource corner_radius_03}">
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="button_border" Property="Background" Value="{DynamicResource theme_label_cardtag_bg01}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="button_border" Property="Background" Value="{DynamicResource theme_label_cardtag_bg01}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--#endregion-->
     <!--  ******************  -->
+
     <!--#region TEXTBLOCK-->
     <!--  TextBlock - Window Title  -->
     <Style x:Key="CustomTextBlock_WindowTitle" TargetType="TextBlock">
@@ -371,15 +555,29 @@
     </Style>
 
     <Style x:Key="CustomBorder_Window" TargetType="Border">
-            <Setter Property="Background" Value="{DynamicResource theme_bg}" />
-            <Setter Property="BorderBrush" Value="{DynamicResource theme_fg}" />
-            <Setter Property="BorderThickness" Value="{DynamicResource thickness_border_01}" />
-            <Setter Property="CornerRadius" Value="{DynamicResource corner_radius_00}" />
-            <Setter Property="SnapsToDevicePixels" Value="True" />
-        </Style>
-    <!--#endregion-->
+        <Setter Property="Background" Value="{DynamicResource theme_bg}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource theme_fg}" />
+        <Setter Property="BorderThickness" Value="{DynamicResource thickness_border_01}" />
+        <Setter Property="CornerRadius" Value="{DynamicResource corner_radius_00}" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+    </Style>
 
+    <Style
+        x:Key="CustomBorder_12"
+        BasedOn="{StaticResource CustomBorder_01}"
+        TargetType="Border">
+        <Setter Property="Background" Value="{DynamicResource theme_bg_02}" />
+    </Style>
+
+    <Style
+        x:Key="CustomBorder_13"
+        BasedOn="{StaticResource CustomBorder_02}"
+        TargetType="Border">
+        <Setter Property="Background" Value="{DynamicResource theme_combobox_bg}" />
+    </Style>
+    <!--#endregion-->
     <!--  ******************  -->
+
     <!--#region RADIOBUTTON-->
     <Style x:Key="CustomRadioButton_Choices" TargetType="RadioButton">
         <Setter Property="Cursor" Value="Cross" />
@@ -539,7 +737,6 @@
                         <Trigger Property="IsChecked" Value="True">
                             <Setter TargetName="Root" Property="Background" Value="{DynamicResource theme_toggleButton_selected_fg}" />
                             <Setter TargetName="Root" Property="TextElement.FontWeight" Value="SemiBold" />
-                            <Setter TargetName="Root" Property="BorderThickness" Value="2,2,2,0" />
                             <Setter TargetName="Root" Property="Padding" Value="0" />
                         </Trigger>
                         <!--  Disabled  -->
@@ -550,12 +747,20 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+        <!--  Added style triggers so that it can be changed outside of control template.  -->
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="BorderThickness" Value="2,2,2,0" />
+                <Setter Property="Border.CornerRadius" Value="12,12,0,0" />
+            </Trigger>
+        </Style.Triggers>
     </Style>
     <!--#endregion-->
-
     <!--  ******************  -->
+
     <!--#region TEXTBOX-->
     <Style x:Key="CustomTextBox_Error" TargetType="TextBox">
+        <Setter Property="Foreground" Value="{DynamicResource theme_error_text}" />
         <Setter Property="Background" Value="{DynamicResource theme_error_card_bg}" />
         <Setter Property="BorderBrush" Value="{DynamicResource theme_border_brush}" />
         <Setter Property="BorderThickness" Value="{StaticResource thickness_border_00}" />
@@ -579,14 +784,14 @@
                         x:Name="Tag_Border"
                         Width="{TemplateBinding Width}"
                         Height="{TemplateBinding Height}"
+                        Padding="{TemplateBinding Padding}"
                         HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
                         VerticalAlignment="{TemplateBinding VerticalAlignment}"
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="{StaticResource corner_radius_02}"
-                        Padding="{TemplateBinding Padding}"
-                        ClipToBounds="True">
+                        ClipToBounds="True"
+                        CornerRadius="{StaticResource corner_radius_02}">
                         <ScrollViewer x:Name="PART_ContentHost" Focusable="False">
                             <ScrollViewer.Template>
                                 <ControlTemplate TargetType="ScrollViewer">
@@ -599,7 +804,6 @@
                                             <RowDefinition Height="*" />
                                             <RowDefinition Height="Auto" />
                                         </Grid.RowDefinitions>
-
                                         <!--  Text content area  -->
                                         <ScrollContentPresenter
                                             x:Name="PART_ScrollContentPresenter"
@@ -609,7 +813,6 @@
                                             CanContentScroll="{TemplateBinding CanContentScroll}"
                                             CanHorizontallyScroll="True"
                                             CanVerticallyScroll="True" />
-
                                         <!--  Vertical scrollbar  -->
                                         <ScrollBar
                                             x:Name="PART_VerticalScrollBar"
@@ -621,7 +824,6 @@
                                             ViewportSize="{TemplateBinding ViewportHeight}"
                                             Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"
                                             Value="{TemplateBinding VerticalOffset}" />
-
                                         <!--  Horizontal scrollbar  -->
                                         <ScrollBar
                                             x:Name="PART_HorizontalScrollBar"
@@ -645,7 +847,7 @@
 
     <Style x:Key="CustomTextBox_Search" TargetType="TextBox">
         <Setter Property="Foreground" Value="{DynamicResource theme_fg}" />
-        <Setter Property="Background" Value="{DynamicResource theme_bg}" />
+        <Setter Property="Background" Value="Transparent" />
         <Setter Property="BorderBrush" Value="{DynamicResource theme_button_border}" />
         <Setter Property="BorderThickness" Value="{StaticResource thickness_border_00}" />
         <Setter Property="FontFamily" Value="{StaticResource font_family_default}" />
@@ -670,6 +872,7 @@
                         <Grid>
                             <TextBlock
                                 x:Name="Placeholder"
+                                Padding="8,0"
                                 HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                 VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                                 FontFamily="{TemplateBinding FontFamily}"
@@ -678,7 +881,6 @@
                                 IsHitTestVisible="False"
                                 Opacity="0.6"
                                 Text="{TemplateBinding Tag}"
-                                Padding="8,0"
                                 Visibility="Collapsed" />
                             <ScrollViewer
                                 x:Name="PART_ContentHost"
@@ -698,10 +900,108 @@
             </Setter.Value>
         </Setter>
     </Style>
-
     <!--#endregion-->
-
     <!--  ******************  -->
+
+    <!--#region SCROLLVIEWER-->
+    <Style x:Key="CustomScrollViewer" TargetType="ScrollViewer">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderBrush" Value="{DynamicResource theme_border_brush}" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="HorizontalScrollBarVisibility" Value="Auto" />
+        <Setter Property="VerticalScrollBarVisibility" Value="Auto" />
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="VerticalAlignment" Value="Stretch" />
+        <Setter Property="CanContentScroll" Value="False" />
+        <Setter Property="Focusable" Value="False" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ScrollViewer">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <!--  Content area  -->
+                        <ScrollContentPresenter
+                            x:Name="PART_ScrollContentPresenter"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Margin="{TemplateBinding Padding}"
+                            CanContentScroll="{TemplateBinding CanContentScroll}"
+                            CanHorizontallyScroll="True"
+                            CanVerticallyScroll="True"
+                            Content="{TemplateBinding Content}"
+                            ContentTemplate="{TemplateBinding ContentTemplate}" />
+                        <!--  Vertical scrollbar  -->
+                        <ScrollBar
+                            x:Name="PART_VerticalScrollBar"
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Maximum="{TemplateBinding ScrollableHeight}"
+                            Orientation="Vertical"
+                            Style="{DynamicResource CustomScrollBar}"
+                            ViewportSize="{TemplateBinding ViewportHeight}"
+                            Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"
+                            Value="{TemplateBinding VerticalOffset}" />
+                        <!--  Horizontal scrollbar  -->
+                        <ScrollBar
+                            x:Name="PART_HorizontalScrollBar"
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Maximum="{TemplateBinding ScrollableWidth}"
+                            Orientation="Horizontal"
+                            Style="{DynamicResource CustomScrollBar}"
+                            ViewportSize="{TemplateBinding ViewportWidth}"
+                            Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}"
+                            Value="{TemplateBinding HorizontalOffset}" />
+                        <!--  Corner filler when both bars are visible  -->
+                        <Border
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Background="{TemplateBinding Background}" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="CustomItemsControl_Scrollable" TargetType="ItemsControl">
+        <Setter Property="Background" Value="{DynamicResource theme_bg_02}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource theme_button_border}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Padding" Value="6,0,0,0" />
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled" />
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ItemsControl">
+                    <Border
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{StaticResource corner_radius_02}">
+                        <ScrollViewer
+                            Margin="0,6"
+                            HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}"
+                            Style="{StaticResource CustomScrollViewer}"
+                            VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}">
+                            <ItemsPresenter />
+                        </ScrollViewer>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--#endregion-->
+    <!--  ******************  -->
+
     <!--#region LABEL-->
     <!--  Label Chip  -->
     <Style x:Key="CustomLabel_CardTag" TargetType="Label">
@@ -732,8 +1032,11 @@
         </Setter>
     </Style>
 
-    <!-- Trigger label change based on ParameterType -->
-    <Style x:Key="ParameterTypeTag" BasedOn="{StaticResource CustomLabel_CardTag}" TargetType="Label">
+    <!--  Trigger label change based on ParameterType  -->
+    <Style
+        x:Key="ParameterTypeTag"
+        BasedOn="{StaticResource CustomLabel_CardTag}"
+        TargetType="Label">
         <Style.Triggers>
             <DataTrigger Binding="{Binding ParameterType}" Value="Shared">
                 <Setter Property="Visibility" Value="Visible" />
@@ -759,12 +1062,11 @@
         </Style.Triggers>
     </Style>
 
-    <!-- Duplicate selection checker -->
-    <!-- Correct -->
+    <!--  Duplicate selection checker  -->
+    <!--  Correct  -->
     <Style x:Key="CorrectIconStyle" TargetType="Label">
         <Setter Property="HorizontalAlignment" Value="Center" />
         <Setter Property="VerticalAlignment" Value="Center" />
-<!--         <Setter Property="Visibility" Value="{Binding ShowCorrectIcon}" /> -->
         <Setter Property="Content">
             <Setter.Value>
                 <ContentControl
@@ -782,12 +1084,11 @@
         </Style.Triggers>
     </Style>
 
-    <!-- Warning -->
+    <!--  Warning  -->
     <Style x:Key="ErrorIconStyle" TargetType="Label">
         <Setter Property="HorizontalAlignment" Value="Right" />
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="Margin" Value="0,0,4,0" />
-<!--         <Setter Property="Visibility" Value="{Binding ShowErrorIcon}" /> -->
         <Setter Property="ToolTip" Value="{Binding ErrorMessages}" />
         <Setter Property="Content">
             <Setter.Value>
@@ -805,6 +1106,529 @@
                 <Setter Property="ToolTip" Value="{Binding ErrorMessages}" />
             </DataTrigger>
         </Style.Triggers>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region RICH TEXT BOX-->
+    <Style x:Key="CustomRichTextBox_SingleLiner" TargetType="RichTextBox">
+        <Setter Property="Foreground" Value="{DynamicResource theme_richtextbox_fg}" />
+        <Setter Property="CaretBrush" Value="{DynamicResource theme_richtextbox_caretbrush}" />
+        <Setter Property="Background" Value="{DynamicResource theme_richtextbox_bg}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource theme_button_border}" />
+        <Setter Property="VerticalScrollBarVisibility" Value="Auto" />
+        <Setter Property="HorizontalScrollBarVisibility" Value="Disabled" />
+        <Setter Property="MinHeight" Value="30" />
+        <Setter Property="BorderThickness" Value="{StaticResource thickness_border_00}" />
+        <Setter Property="Padding" Value="2" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RichTextBox}">
+                    <Grid>
+                        <!--  Layout-affecting border - size/padding never change  -->
+                        <Border
+                            x:Name="MainBorder"
+                            Padding="{TemplateBinding Padding}"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="{StaticResource corner_radius_02}"
+                            Focusable="False">
+                            <ScrollViewer
+                                x:Name="PART_ContentHost"
+                                Margin="0,6"
+                                Focusable="False"
+                                Style="{StaticResource CustomScrollViewer}" />
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter TargetName="MainBorder" Property="BorderThickness" Value="2" />
+                            <Setter TargetName="MainBorder" Property="Padding" Value="1" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Resources>
+            <Style TargetType="{x:Type Paragraph}">
+                <Setter Property="FontFamily" Value="{StaticResource font_family_default}" />
+                <Setter Property="FontSize" Value="{StaticResource text_height_normal}" />
+                <Setter Property="TextAlignment" Value="Left" />
+                <Setter Property="LineHeight" Value="22" />
+                <Setter Property="LineStackingStrategy" Value="MaxHeight" />
+            </Style>
+        </Style.Resources>
+    </Style>
+
+    <Style x:Key="CustomRichTextBox_SingleLiner_ReadOnly" TargetType="RichTextBox">
+        <Setter Property="Foreground" Value="{DynamicResource theme_richtextbox_fg}" />
+        <Setter Property="CaretBrush" Value="{DynamicResource theme_richtextbox_caretbrush}" />
+        <Setter Property="Background" Value="{DynamicResource theme_richtextbox_bg}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource theme_button_border}" />
+        <Setter Property="BorderThickness" Value="{StaticResource thickness_border_00}" />
+        <Setter Property="VerticalScrollBarVisibility" Value="Disabled" />
+        <Setter Property="HorizontalScrollBarVisibility" Value="Disabled" />
+        <Setter Property="MinHeight" Value="30" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="IsReadOnly" Value="True" />
+        <Setter Property="AcceptsReturn" Value="False" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RichTextBox}">
+                    <Grid>
+                        <Border
+                            x:Name="MainBorder"
+                            Padding="{TemplateBinding Padding}"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="{StaticResource corner_radius_02}"
+                            Focusable="False">
+                            <ScrollViewer
+                                x:Name="PART_ContentHost"
+                                Margin="0"
+                                VerticalAlignment="Center"
+                                Focusable="False" />
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter TargetName="MainBorder" Property="BorderThickness" Value="2" />
+                            <Setter TargetName="MainBorder" Property="Padding" Value="0" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Resources>
+            <Style TargetType="{x:Type Paragraph}">
+                <Setter Property="FontFamily" Value="{StaticResource font_family_default}" />
+                <Setter Property="FontSize" Value="{StaticResource text_height_normal}" />
+                <Setter Property="TextAlignment" Value="Left" />
+                <Setter Property="LineHeight" Value="22" />
+                <Setter Property="LineStackingStrategy" Value="MaxHeight" />
+            </Style>
+        </Style.Resources>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region GRID SPLITTER-->
+    <Style x:Key="GridSplitterStyle_Vertical" TargetType="{x:Type GridSplitter}">
+        <Setter Property="Width" Value="16" />
+        <Setter Property="MinHeight" Value="50" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Stretch" />
+        <Setter Property="Foreground" Value="{DynamicResource theme_button_fg}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type GridSplitter}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Rectangle
+                            x:Name="PART_Background"
+                            Grid.Row="0"
+                            Fill="Transparent" />
+                        <ContentControl
+                            Grid.Row="0"
+                            Width="{TemplateBinding MinHeight}"
+                            Height="{TemplateBinding Width}"
+                            Style="{StaticResource IconControlStyle_GridSplitter}"
+                            Tag="{StaticResource icon_grid_splitter}" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="PART_Background" Property="Fill" Value="{DynamicResource theme_combobox_bg}" />
+                        </Trigger>
+                        <Trigger Property="IsDragging" Value="True">
+                            <Setter TargetName="PART_Background" Property="Fill" Value="{DynamicResource theme_combobox_bg}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region EXPANDER-->
+    <ControlTemplate x:Key="ExpanderToggleButtonTemplate" TargetType="{x:Type ToggleButton}">
+        <Grid Margin="{TemplateBinding Padding}" Background="Transparent">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <ContentPresenter
+                x:Name="ContentPresenter"
+                Grid.Column="1"
+                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                Content="{TemplateBinding Content}"
+                TextElement.FontSize="{TemplateBinding FontSize}" />
+            <Border
+                x:Name="ExpanderIconBorder"
+                Grid.Column="0"
+                Width="18"
+                Height="18"
+                Margin="4,0,8,0"
+                Padding="2"
+                Background="{DynamicResource theme_toggleButton_disabled_bg}"
+                BorderBrush="{DynamicResource theme_button_border}"
+                BorderThickness="1"
+                CornerRadius="4">
+                <Grid
+                    x:Name="ChevronGrid"
+                    VerticalAlignment="Center"
+                    RenderTransformOrigin="0.5,0.5">
+                    <Grid.RenderTransform>
+                        <RotateTransform Angle="0" />
+                    </Grid.RenderTransform>
+                    <ContentControl
+                        x:Name="ControlChevronIcon"
+                        Width="8"
+                        Height="8"
+                        Style="{StaticResource IconControlStyle}"
+                        Tag="{StaticResource icon_arrow_up}" />
+                </Grid>
+            </Border>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter TargetName="ExpanderIconBorder" Property="Background" Value="{DynamicResource theme_toggleButton_selected_fg}" />
+                <Setter TargetName="ChevronGrid" Property="RenderTransform">
+                    <Setter.Value>
+                        <RotateTransform Angle="180" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="ExpanderIconBorder" Property="Background" Value="{DynamicResource theme_toggleButton_selected_fg}" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <Style x:Key="CustomExpander_NoScroll" TargetType="{x:Type Expander}">
+        <Setter Property="Background" Value="{DynamicResource theme_richtextbox_bg}" />
+        <Setter Property="Foreground" Value="{DynamicResource theme_richtextbox_fg}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource theme_button_border}" />
+        <Setter Property="Margin" Value="0,0,0,8" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="VerticalAlignment" Value="Stretch" />
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Setter Property="VerticalContentAlignment" Value="Stretch" />
+        <Setter Property="IsExpanded" Value="False" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Expander}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <!--  Header - always visible  -->
+                        <Border
+                            x:Name="ToggleButtonBorder"
+                            Grid.Row="0"
+                            Padding="4"
+                            Background="{DynamicResource theme_bg_02}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="1"
+                            CornerRadius="8">
+                            <ToggleButton
+                                x:Name="ExpanderToggleButton"
+                                Margin="0"
+                                Padding="{TemplateBinding Padding}"
+                                HorizontalAlignment="Stretch"
+                                HorizontalContentAlignment="Stretch"
+                                VerticalContentAlignment="Center"
+                                Content="{TemplateBinding Header}"
+                                FontSize="{TemplateBinding FontSize}"
+                                Foreground="{TemplateBinding Foreground}"
+                                IsChecked="{Binding IsExpanded, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
+                                IsEnabled="{TemplateBinding IsEnabled}"
+                                OverridesDefaultStyle="True"
+                                Template="{StaticResource ExpanderToggleButtonTemplate}" />
+                        </Border>
+                        <!--  Content - No ScrollViewer, sizes to content, no scrolling  -->
+                        <Border
+                            x:Name="ContentPresenterBorder"
+                            Grid.Row="1"
+                            Padding="0"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="1,0,1,1"
+                            CornerRadius="0,0,8,8"
+                            Visibility="Collapsed">
+                            <ContentPresenter
+                                x:Name="ContentPresenter"
+                                Margin="{TemplateBinding Padding}"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                Content="{TemplateBinding Content}" />
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsExpanded" Value="True">
+                            <Setter TargetName="ToggleButtonBorder" Property="BorderThickness" Value="6,1,1,0" />
+                            <Setter TargetName="ToggleButtonBorder" Property="CornerRadius" Value="8,8,0,0" />
+                            <Setter TargetName="ToggleButtonBorder" Property="Padding" Value="4" />
+                            <Setter TargetName="ToggleButtonBorder" Property="Background" Value="{DynamicResource theme_error_card_bg}" />
+                            <Setter TargetName="ContentPresenterBorder" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="ContentPresenterBorder" Property="BorderThickness" Value="6,0,1,1" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="ExpanderToggleButton" Property="Foreground" Value="{DynamicResource theme_button_border}" />
+                        </Trigger>
+                        <Trigger SourceName="ExpanderToggleButton" Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ExpanderToggleButton" Property="BorderBrush" Value="{DynamicResource theme_button_border}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region GRID VIEW-->
+    <!--  Style - GridViewColumnHeader gripper (resize thumb)  -->
+    <Style x:Key="CustomGridViewColumnHeaderGripperStyle" TargetType="{x:Type Thumb}">
+        <Setter Property="VerticalAlignment" Value="Stretch" />
+        <Setter Property="Width" Value="8" />
+        <Setter Property="Cursor" Value="SizeWE" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Thumb}">
+                    <Border Background="Transparent" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--  ******************  -->
+    <!--  Style - GridViewColumnHeader (maps to DataGridColumnHeader style)  -->
+    <Style x:Key="CustomDefaultGridViewColumnHeaderStyle" TargetType="{x:Type GridViewColumnHeader}">
+        <Setter Property="Background" Value="{DynamicResource theme_datagrid_header_bg}" />
+        <Setter Property="Foreground" Value="{DynamicResource theme_datagrid_overall_fg}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource theme_datagrid_gridline}" />
+        <Setter Property="BorderThickness" Value="0,0,1,1" />
+        <Setter Property="Padding" Value="4" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="IsTabStop" Value="False" />
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type GridViewColumnHeader}">
+                    <Grid>
+                        <Border
+                            x:Name="HeaderBorder"
+                            Padding="{TemplateBinding Padding}"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Focusable="False"
+                            IsHitTestVisible="False">
+                            <Grid HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <ContentPresenter
+                                    Grid.Column="0"
+                                    RecognizesAccessKey="True"
+                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                <!--  Sort icon placeholder  -->
+                                <Path
+                                    x:Name="SortArrow"
+                                    Grid.Column="1"
+                                    Margin="4,0,0,0"
+                                    VerticalAlignment="Center"
+                                    Data="M 0,4 L 4,0 L 8,4 Z"
+                                    Fill="{TemplateBinding Foreground}"
+                                    RenderTransformOrigin="0.5,0.5"
+                                    Visibility="Collapsed">
+                                    <Path.RenderTransform>
+                                        <RotateTransform Angle="0" />
+                                    </Path.RenderTransform>
+                                </Path>
+                            </Grid>
+                        </Border>
+                        <Thumb
+                            x:Name="PART_HeaderGripper"
+                            HorizontalAlignment="Right"
+                            Style="{StaticResource CustomGridViewColumnHeaderGripperStyle}" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--  ******************  -->
+    <!--  Style - ListViewItem (maps to DataGridRow style, incl. alternating rows)  -->
+    <!--  NOTE: set ListView AlternationCount="2" for alternating rows to work  -->
+    <Style x:Key="CustomDefaultListViewItemStyle" TargetType="{x:Type ListViewItem}">
+        <Setter Property="Background" Value="{DynamicResource theme_datagrid_overall_bg}" />
+        <Setter Property="Foreground" Value="{DynamicResource theme_datagrid_overall_fg}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource theme_datagrid_overall_fg}" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Padding" Value="4" />
+        <Setter Property="Height" Value="28" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="IsTabStop" Value="False" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListViewItem}">
+                    <Border
+                        x:Name="LVI_Border"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        SnapsToDevicePixels="True">
+                        <GridViewRowPresenter
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Content="{TemplateBinding Content}"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <!--  Normal rows  -->
+                        <Trigger Property="ItemsControl.AlternationIndex" Value="0">
+                            <Setter TargetName="LVI_Border" Property="Background" Value="{DynamicResource theme_datagrid_overall_bg}" />
+                        </Trigger>
+                        <!--  Alternating rows  -->
+                        <Trigger Property="ItemsControl.AlternationIndex" Value="1">
+                            <Setter TargetName="LVI_Border" Property="Background" Value="{DynamicResource theme_datagrid_alternate_row_bg}" />
+                        </Trigger>
+                        <!--  Warning rows - overrides alternation coloring, must come after both above triggers  -->
+                        <DataTrigger Binding="{Binding HasError}" Value="True">
+                            <Setter TargetName="LVI_Border" Property="Background" Value="{DynamicResource theme_datagrid_invalid_row_bg}" />
+                        </DataTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--  ******************  -->
+    <!--  Main style: ListView (GridView host, mirrors CustomDataGrid-03)  -->
+    <Style x:Key="CustomListView-03" TargetType="{x:Type ListView}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Foreground" Value="{DynamicResource theme_datagrid_overall_fg}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource theme_datagrid_gridline}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="FontSize" Value="{StaticResource text_height_normal}" />
+        <Setter Property="AlternationCount" Value="2" />
+        <Setter Property="ScrollViewer.CanContentScroll" Value="False" />
+        <Setter Property="ScrollViewer.PanningMode" Value="Both" />
+        <Setter Property="Stylus.IsFlicksEnabled" Value="False" />
+        <Setter Property="ItemContainerStyle" Value="{StaticResource CustomDefaultListViewItemStyle}" />
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="SelectionMode" Value="Single" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListView}">
+                    <Border
+                        x:Name="border"
+                        Padding="0"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        ClipToBounds="True"
+                        CornerRadius="0"
+                        SnapsToDevicePixels="True">
+                        <ScrollViewer
+                            Padding="{TemplateBinding Padding}"
+                            Focusable="False"
+                            HorizontalScrollBarVisibility="Disabled"
+                            VerticalScrollBarVisibility="Disabled">
+                            <StackPanel>
+                                <GridViewHeaderRowPresenter
+                                    AllowsColumnReorder="False"
+                                    ColumnHeaderContainerStyle="{StaticResource CustomDefaultGridViewColumnHeaderStyle}"
+                                    ColumnHeaderTemplate="{Binding View.ColumnHeaderTemplate, RelativeSource={RelativeSource TemplatedParent}}"
+                                    ColumnHeaderTemplateSelector="{Binding View.ColumnHeaderTemplateSelector, RelativeSource={RelativeSource TemplatedParent}}"
+                                    Columns="{Binding View.Columns, RelativeSource={RelativeSource TemplatedParent}}" />
+                                <ItemsPresenter />
+                            </StackPanel>
+                        </ScrollViewer>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region TOGGLE BUTTON-->
+    <Style x:Key="CustomToggleButton_Transparent" TargetType="ToggleButton">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Foreground" Value="{DynamicResource theme_button_fg}" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Padding" Value="6,2" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ToggleButton">
+                    <Border
+                        x:Name="ToggleBorder"
+                        Margin="{TemplateBinding Margin}"
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="4">
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region FLYOUT-->
+    <Style x:Key="CustomFlyout_Popup" TargetType="Popup">
+        <Setter Property="AllowsTransparency" Value="True" />
+        <Setter Property="Placement" Value="Bottom" />
+        <Setter Property="PopupAnimation" Value="Fade" />
+        <Setter Property="StaysOpen" Value="False" />
+        <Setter Property="VerticalOffset" Value="4" />
+    </Style>
+
+    <Style x:Key="CustomFlyout_Border" TargetType="Border">
+        <Setter Property="Background" Value="{DynamicResource theme_bg}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource theme_border_brush}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="{DynamicResource corner_radius_02}" />
+        <Setter Property="Padding" Value="12" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect
+                    BlurRadius="12"
+                    Direction="270"
+                    Opacity="0.25"
+                    ShadowDepth="2" />
+            </Setter.Value>
+        </Setter>
     </Style>
     <!--#endregion-->
 </ResourceDictionary>

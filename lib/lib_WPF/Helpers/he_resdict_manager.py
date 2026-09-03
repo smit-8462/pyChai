@@ -3,18 +3,15 @@
 import os, clr
 
 clr.AddReference("System")
-
-# from System.Windows import Window, ResourceDictionary
 from System.Windows import ResourceDictionary
 from System import Uri, UriKind
-# import System
 
 # ===============
 # ---> VARIABLES <---
 SHARED_RESOURCES = []
 
 # ===============
-# ---> CLASSES <---
+# ---> CLASSES <---		
 class ResDictManager(object):
 	def __init__(self,use_lib_resources=False):
 		"""
@@ -75,3 +72,28 @@ class ResDictManager(object):
 				break
 		lib_resources_path = os.path.join(pychai_extension_folder, "lib", "lib_WPF", "Resources")
 		return lib_resources_path
+
+# ===============
+# ---> METHODS <---
+def add_resource_dict(target, resource_dict_list):
+	"""
+	Add Resource Dictionary to XAML UI.
+	:param target: Attach to target Window reference. It will act as "self" function in python.
+	:type target: self
+	:param resource_dict_list: List of Resource Dictionary to add.
+	:type resource_dict_list: list
+	"""
+	# Get file paths of XAML files
+	cur_file = os.path.abspath(__file__)	# type: str
+	cur_dir = os.path.dirname(cur_file)
+	goback_dir = os.path.abspath(os.path.join(cur_dir, ".."))  # Go back to previous directory
+	resource_dir = os.path.join(goback_dir, "Resources")  # Resource directory
+
+	# Get absolute path for files
+	resdict_list_absolute = [os.path.join(resource_dir, fil) for fil in resource_dict_list]
+
+	# Add to resource directory
+	for abs_file_path in resdict_list_absolute:
+		rd = ResourceDictionary()
+		rd.Source = Uri(abs_file_path, UriKind.Absolute)
+		target.Resources.MergedDictionaries.Add(rd)

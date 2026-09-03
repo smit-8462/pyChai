@@ -7,7 +7,7 @@ from lib_WPF.Views.WindowTopBarUC import WindowTopBarUC
 # ---> CLASS <---
 class UserControlManager(object):
 	"""Handles initialization and event wiring of all UserControls (WindowBottomBarUC & WindowTopBarUC)."""
-	def __init__(self, window_target, title="pyChai"):
+	def __init__(self, window_target, title="pyChai", hide_bottom_bar=False):
 		"""
 		:param window_target: Parent Window class
 		:type window_target: target
@@ -15,7 +15,8 @@ class UserControlManager(object):
 		self.window_target = window_target
 		self._title = title
 		self._window_top_bar_setup()
-		self._window_bottom_bar_setup()
+		if not hide_bottom_bar: 
+			self._window_bottom_bar_setup()
 
 	def _window_top_bar_setup(self):
 		self.top_bar = WindowTopBarUC()

@@ -34,9 +34,14 @@
     <Color x:Key="ColorLabelBackground01">#9CD3EE</Color>
     <Color x:Key="ColorLabelBackground02">#9BEDB9</Color>
     <Color x:Key="ColorLabelBackground03">#F7F68B</Color>
+    <Color x:Key="ColorLabelBackground04">#EFE0CA</Color>
     <Color x:Key="ColorLabelForeground01">#0976A8</Color>
     <Color x:Key="ColorLabelForeground02">#1C9F4D</Color>
-    <Color x:Key="ColorLabelForeground03">#B7B406</Color>
+    <Color x:Key="ColorLabelForeground03">#6A6925</Color>
+    <Color x:Key="ColorLabelForeground04">#995800</Color>
+
+    <!-- General -->
+    <Color x:Key="Color101">#bbb8a3</Color>
     <!--#endregion-->
 
     <!--  ******************  -->
@@ -93,16 +98,20 @@
     <SolidColorBrush x:Key="theme_label_cardtag_bg01" Color="{StaticResource ColorLabelBackground01}" />
     <SolidColorBrush x:Key="theme_label_cardtag_bg02" Color="{StaticResource ColorLabelBackground02}" />
     <SolidColorBrush x:Key="theme_label_cardtag_bg03" Color="{StaticResource ColorLabelBackground03}" />
+    <SolidColorBrush x:Key="theme_label_tokentag_bg01" Color="{StaticResource ColorLabelBackground04}" />
     <SolidColorBrush x:Key="theme_label_cardtag_fg01" Color="{StaticResource ColorLabelForeground01}" />
     <SolidColorBrush x:Key="theme_label_cardtag_fg02" Color="{StaticResource ColorLabelForeground02}" />
     <SolidColorBrush x:Key="theme_label_cardtag_fg03" Color="{StaticResource ColorLabelForeground03}" />
+    <SolidColorBrush x:Key="theme_label_tokentag_fg01" Color="{StaticResource ColorLabelForeground04}" />
 
     <!--  General  -->
     <SolidColorBrush x:Key="theme_bg" Color="{StaticResource ColorBackground00}" />
+    <SolidColorBrush x:Key="theme_bg_02" Color="{StaticResource ColorBackground02}" />
     <SolidColorBrush x:Key="theme_fg" Color="{StaticResource ColorForeground00}" />
     <SolidColorBrush x:Key="theme_fg_01" Color="{StaticResource ColorForeground01}" />
     <SolidColorBrush x:Key="theme_icon" Color="{StaticResource ColorForeground01}" />
     <SolidColorBrush x:Key="window_border" Color="#330000" />
+    <SolidColorBrush x:Key="theme_color_101" Color="{StaticResource Color101}" />
 
     <!--  ScrollViewer  -->
     <SolidColorBrush x:Key="theme_scrollviewer_bg" Color="{StaticResource ColorBackground01}" />
@@ -128,5 +137,12 @@
 
     <!--  TreeView  -->
     <SolidColorBrush x:Key="theme_treeview_bg" Color="{StaticResource ColorBackground02}" />
+
+    <!--  RichTextBox  -->
+    <SolidColorBrush x:Key="theme_richtextbox_bg" Color="{StaticResource ColorBackground02}" />
+    <SolidColorBrush x:Key="theme_richtextbox_fg" Color="{StaticResource ColorForeground01}" />
+    <SolidColorBrush x:Key="theme_richtextbox_caretbrush" Color="{StaticResource ColorForeground01}" />
+    <SolidColorBrush x:Key="theme_richtextbox_borderbrush" Color="{StaticResource ColorStateSelect}" />
+
     <!--#endregion-->
 </ResourceDictionary>
