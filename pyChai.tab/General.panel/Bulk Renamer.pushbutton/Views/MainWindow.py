@@ -185,6 +185,7 @@ class MainWindow(WindowBase):
 
 	def ButtonEvent_Information_SaveTemplate(self, sender, event):
 		self.vm_mainWindow.InformationVM.template_export(self.tbx_rename_box)
+		self.restore_window()
 
 	def ButtonEvent_Information_PickTemplate(self, sender, event):
 		try:
@@ -452,12 +453,15 @@ class MainWindow(WindowBase):
 				self.vm_mainWindow.TreeViewerVM.tree_refresh_from_source()
 				self._reset_tree_selection()
 				self.vm_mainWindow.reset_renamer_list()
-
-				# Restore window on top after manual selection, since it used to go behind.
-				if self.WindowState == WindowState.Minimized:
-					self.WindowState = WindowState.Normal
-				self.Activate()
+				self.restore_window()
 			else:
 				self.Close()
 		else:
 			TaskDialog.Show("Error", "Rename failed.")
+
+	def restore_window(self):
+		"""Restore window on top after task completion."""
+		# Restore window on top after manual selection, since it used to go behind.
+		if self.WindowState == WindowState.Minimized:
+			self.WindowState = WindowState.Normal
+		self.Activate()

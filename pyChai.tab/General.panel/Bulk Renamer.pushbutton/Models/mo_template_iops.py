@@ -61,6 +61,14 @@ class TemplateIOPS(object):
 							  title='Save template file')
 			if not save_file_path:
 				return
+
+			# Check if the string already exists as a line in the target file (if it exists)
+			if os.path.exists(save_file_path):
+				with open(save_file_path, "rt") as check_file:
+					existing_lines = [ln.rstrip("\n").rstrip("\r") for ln in check_file]
+				if richtextbox_str_text in existing_lines:
+					return
+			
 			with open(save_file_path, "w") as text_file:
 				text_file.write(richtextbox_str_text)
 		elif res == opt_append and self._imported_txt_file_path:
@@ -95,3 +103,7 @@ class TemplateIOPS(object):
 			print("Failed to generate preview:\n\n{}\n\n{}".format(e, traceback.format_exc()))
 			return None
 		return valid_templates
+
+	def check_if_exist(self):
+		"""Check if template exists in file before appending."""
+		pass
