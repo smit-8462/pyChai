@@ -309,7 +309,6 @@ class MainWindow(WindowBase):
 				insert_position = self._last_caret_position_rename or self.tbx_rename_box.CaretPosition
 			self.rename_tokenizer.set_text(token_text, replace_existing=False, user_caret_position=insert_position)
 			self._reset_all_text_transformation()
-			self._clear_richtextbox_main()
 		except Exception as e:
 			print("Failed to load template into RichTextBox:\n\n{}\n\n{}".format(e, traceback.format_exc()))
 	

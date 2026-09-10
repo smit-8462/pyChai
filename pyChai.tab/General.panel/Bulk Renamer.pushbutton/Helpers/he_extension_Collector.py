@@ -71,7 +71,19 @@ class ItemsCollectionBase(object):
 				return val if val else None
 			elif param_stor_type == StorageType.Double:
 				val = param.AsValueString()
-				return str(val).split(" ")[0] if val else None
+				
+				if not val:
+					return None
+				val = str(val)
+				# Feet-inches length format (e.g. "2' 10"", "7' 0"") - don't truncate on the space.
+				if val[-1] in ("'", '"'):
+					return val
+				
+				tokens = val.split(" ")
+				# e.g. "15 mm" -> "15", "70 A" -> "70"
+				if len(tokens) > 1 and tokens[-1].isalpha():
+					return " ".join(tokens[:-1])
+				return val
 			elif param_stor_type == StorageType.Integer:
 				val = param.AsInteger()
 				val_string = param.AsValueString()
