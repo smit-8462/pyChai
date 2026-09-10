@@ -54,7 +54,7 @@ class MainWindow(WindowBase):
 
 		# ViewModel initialise once
 		self.vm_windowBottomBar = WindowBottomBarViewModel()
-		self.vm_mainWindow = MainWindowViewModel(self.ext_event, self.ext_event_handler)
+		self.vm_mainWindow = MainWindowViewModel(self.ext_event, self.ext_event_handler, self)
 
 		self._is_loaded = False		# To check whether the `Loaded` event is loaded or not.
 
@@ -309,6 +309,7 @@ class MainWindow(WindowBase):
 				insert_position = self._last_caret_position_rename or self.tbx_rename_box.CaretPosition
 			self.rename_tokenizer.set_text(token_text, replace_existing=False, user_caret_position=insert_position)
 			self._reset_all_text_transformation()
+			self._clear_richtextbox_main()
 		except Exception as e:
 			print("Failed to load template into RichTextBox:\n\n{}\n\n{}".format(e, traceback.format_exc()))
 	
@@ -420,7 +421,7 @@ class MainWindow(WindowBase):
 		output = script.get_output()
 		table_data_build = [[idx + 1, old_name, error_message] for idx, (old_name, error_message) in enumerate(error_list)]		# Building data
 		output.print_html_table(table_data=table_data_build, 
-		                        title="The following items failed - ", 
+		                        title="Errors - ", 
 								columns=["S. No.", "Existing Type Name", "Error"], 
 								formats=['', '', ''], 
 								column_head_align_styles=["center", "left", "left"], 

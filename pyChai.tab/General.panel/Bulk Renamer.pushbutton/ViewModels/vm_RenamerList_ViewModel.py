@@ -28,10 +28,11 @@ rvt_year = int(app.VersionNumber)
 # ---> CLASSES <---
 class RenamerListVM_MainWindow(ViewModelBase):
 	"""Class related to Renamer."""
-	def __init__(self, vm_tree_viewer, vm_information):
+	def __init__(self, vm_tree_viewer, vm_information, main_window_view):
 		super(RenamerListVM_MainWindow,self).__init__()
 		self._vm_tree_viewer = vm_tree_viewer
 		self._vm_information = vm_information		# type: InformationVM_MainWindow
+		self._main_window_view = main_window_view
 		self._text_manip_class = Token_TextManipulation_Control()
 		self._error_list = []
 		# Bind ListView's ItemsControl to the below
@@ -81,6 +82,7 @@ class RenamerListVM_MainWindow(ViewModelBase):
 		extracted_token_list, extracted_params_set = self._text_manip_class.extract_variables(richtextbox_text)
 		if not extracted_token_list: 
 			TaskDialog.Show("Invalid", "Parameter not found.\nPlease add Parameter from collection.")
+			self._main_window_view.restore_window()
 			return
 
 		# Check whether the extracted parameters are in sync with parameters collection or not.
@@ -145,6 +147,7 @@ class RenamerListVM_MainWindow(ViewModelBase):
 		extracted_token_list, extracted_params_set = self._text_manip_class.extract_variables(new_text)
 		if not extracted_token_list:
 			TaskDialog.Show("Invalid", "Parameter not found.\nPlease add Parameter from collection.")
+			self._main_window_view.restore_window()
 			return False
 
 		params_collection = self._vm_information.DynamicParameterSet

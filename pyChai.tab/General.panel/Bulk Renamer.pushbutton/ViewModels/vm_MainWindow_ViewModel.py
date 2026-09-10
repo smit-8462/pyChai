@@ -30,17 +30,18 @@ PY_SCRIPT_PATH = os.path.abspath(__file__)    # type: str
 # ---> CLASSES <---
 class MainWindowViewModel(ViewModelBase):
 	"""Main Window View Model."""
-	def __init__(self, ext_event, ext_event_handler):
+	def __init__(self, ext_event, ext_event_handler, main_window_view):
 		super(MainWindowViewModel,self).__init__()
 		# Reuse the shared ExternalEvent created in MainWindow.
 		self.m_ExternalEvent = ext_event
 		self.m_ExternalEventHandler = ext_event_handler
+		self._main_window_view = main_window_view
 
 		# Initial choice
 		self._combo_pick_choice = "combo_pick_family_type"
 		self.TreeViewerVM = TreeViewerVM_MainWindow(self._combo_pick_choice)
 		self.InformationVM = InformationVM_MainWindow(self.TreeViewerVM)
-		self.RenamerListVM = RenamerListVM_MainWindow(self.TreeViewerVM, self.InformationVM)
+		self.RenamerListVM = RenamerListVM_MainWindow(self.TreeViewerVM, self.InformationVM, self._main_window_view)
 
 		# Use External Event after sub-VMs are initialised
 		self.m_ExternalEventHandler.passable_method = self.apply_final_name		
