@@ -75,16 +75,16 @@ class RenamerListVM_MainWindow(ViewModelBase):
 		self._vm_information.IsListGenerated = len(self._grouped_templates) > 0
 
 	def populate_data_in_groups(self, richtextbox_object):
-		"""Method of invoking populating the groups when clicked apply."""
+		"""Method of invoking populating the groups when clicked apply. Returns True on success, False if validation failed or bailed out early."""
 		richtextbox_text = extract_richtextbox_contents(richtextbox_object)
-		if not richtextbox_text: return
-
+		if not richtextbox_text: return False
+	
 		extracted_token_list, extracted_params_set = self._text_manip_class.extract_variables(richtextbox_text)
 		if not extracted_token_list: 
 			TaskDialog.Show("Invalid", "Parameter not found.\nPlease add Parameter from collection.")
 			self._main_window_view.restore_window()
-			return
-
+			return False
+	
 		# Check whether the extracted parameters are in sync with parameters collection or not.
 		params_collection = self._vm_information.DynamicParameterSet
 		check_part = extracted_params_set.issubset(params_collection)
@@ -95,8 +95,8 @@ class RenamerListVM_MainWindow(ViewModelBase):
 				msg00 += "\n{}. {}".format((idx + 1), item)
 			msg01 = "Following Parameters are either invalid or not present -\n\n{}".format(msg00)
 			TaskDialog.Show("Invalid", msg01)
-			return
-
+			return False
+	
 		compiled_list = []
 		name_dict = {}
 		# `clear()` for clearing python list was introduced in Python 3, therefore we'll need to use slicing for clearing the list.
@@ -110,7 +110,7 @@ class RenamerListVM_MainWindow(ViewModelBase):
 			# Add it in a dictionary
 			for item in rename_list:
 				name_dict[item[0]] = (item[1], item[2])
-
+	
 			compiled_list.extend(rename_list)	# Extending the compiled list having tuple (old name, new name)
 			self._error_list.extend(gdr.TemplateErrorList)	# Extending the error list
 			self._vm_tree_viewer.ElementsChecked.update(checked_elements)
@@ -122,10 +122,12 @@ class RenamerListVM_MainWindow(ViewModelBase):
 			for item in rename_list:
 				if item[0] not in self._rename_collection:
 					self._rename_collection[item[0]] = (item[1], item[2])
-
+	
 		self._vm_tree_viewer.tree_collapse_checked_items()
-		self._rename_collection = name_dict
+		self._rename_collection.update(name_dict)		# merge this group's items in, don't clobber earlier groups'
+		self.OnPropertyChanged("RenameCollection")
 		self._recalculate_total_errors()
+		return True
 
 	def clear_all_groups(self):
 		"""

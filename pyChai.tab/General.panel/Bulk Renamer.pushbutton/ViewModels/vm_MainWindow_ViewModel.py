@@ -67,8 +67,6 @@ class MainWindowViewModel(ViewModelBase):
 		self.TreeViewerVM.tree_restore_hidden_items()
 		self.TreeViewerVM.tree_search_collapse_all_items()
 		self.TreeViewerVM.tree_selection_clear()
-		self.InformationVM.DynamicParameters.Clear()
-		self.InformationVM._common_parameters.clear()
 		self.InformationVM.release_template_edit()
 
 	def cancel_when_combobox_switch(self):
@@ -422,6 +420,27 @@ class InformationVM_MainWindow(ViewModelBase):
 			item_param_sets.append(set(item.ParameterObjectsList.keys()))
 		self._common_parameters = set.intersection(*item_param_sets)	# Unpacking list into individual elements
 
+	def make_parameter_button_set_from_group(self, group_data):
+		# type: (GroupData_Renamer) -> None
+		"""Same as make_parameter_button_set, but sourced from an already-held template's rows
+		(ParameterSnapshot) instead of live tree selection - tree items for a grouped template
+		are already unchecked/hidden by the time it can be edited, so CheckedItems is empty."""
+		self.DynamicParameters.Clear()
+		self._common_parameters.clear()
+
+		rows = group_data.DataGridCollection
+		if not rows or rows.Count == 0:
+			TaskDialog.Show("Selection", "No items found for this template.")
+			return
+
+		item_param_sets = [set(row.ParameterSnapshot.keys()) for row in rows]
+		self._common_parameters = set.intersection(*item_param_sets)
+		if len(self._common_parameters) > 0:
+			for par in sorted(self._common_parameters, key=str.lower):
+				self.DynamicParameters.Add(par)
+		else:
+			TaskDialog.Show("Selection", "No common parameters found for this template's items.")
+
 	def make_parameter_button_set(self):
 		"""Make buttons from a parameter set."""
 		self.DynamicParameters.Clear()
@@ -443,3 +462,10 @@ class InformationVM_MainWindow(ViewModelBase):
 
 	def release_template_edit(self):
 		self.EditingTemplate = None
+		self.DynamicParameters.Clear()
+		self._common_parameters.clear()
+
+	def clear_dynamic_parameters(self):
+		"""Clear the dynamic-parameter button set after a template has been applied to the list."""
+		self.DynamicParameters.Clear()
+		self._common_parameters.clear()

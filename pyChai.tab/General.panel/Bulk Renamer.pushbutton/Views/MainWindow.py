@@ -199,7 +199,11 @@ class MainWindow(WindowBase):
 
 	def ButtonEvent_Information_TextBoxApply(self, sender, event):
 		try:
-			self.vm_mainWindow.RenamerListVM.populate_data_in_groups(self.tbx_rename_box)
+			# self.vm_mainWindow.RenamerListVM.populate_data_in_groups(self.tbx_rename_box)
+			success = self.vm_mainWindow.RenamerListVM.populate_data_in_groups(self.tbx_rename_box)
+			if success:
+				self.vm_mainWindow.InformationVM.clear_dynamic_parameters()
+				self._clear_richtextbox_main()
 		except Exception as e:
 			print("Failed to generate preview:\n\n{}\n\n{}".format(e, traceback.format_exc()))
 	
@@ -333,6 +337,7 @@ class MainWindow(WindowBase):
 			info_vm = self.vm_mainWindow.InformationVM
 			if sender.IsChecked:
 				info_vm.EditingTemplate = group_data		# store the object, not just TemplateName
+				info_vm.make_parameter_button_set_from_group(group_data)
 				self.rename_tokenizer.set_text(group_data.TemplateName, replace_existing=True)
 			else:
 				if info_vm.EditingTemplate is group_data:
